@@ -1,0 +1,640 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+ul { 
+    list-style: none;
+    text-decoration: none;
+}
+
+h1 h2 h3 h4 h5 h6 {
+    font-weight: 400;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    box-sizing: border-box;
+
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 150px;
+    height: 38px;
+
+    font-weight: 500;
+    font-size: 14px;
+
+    background-color: #6f1eaa;
+    color: #FFFFFF;
+    border-radius: 19px ;
+}
+/* Header Nav */
+
+.header {
+   padding: 25px 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header__nav {
+}
+
+.header__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 33px;
+    padding:0
+}
+.header__nav a {
+    font-size: 14px;
+}
+
+
+.header__logo {
+}
+
+.header .login {
+    font-size: 14px;
+    color: #6f1eaa
+}
+
+/* Welcome */
+
+.veterinarians {
+  background-color: #fef7e5;
+  position: relative;
+}
+
+.veterinarians .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.welcome__text {
+    text-align: center;
+    max-width: 565px;
+}
+
+.veterinarians::before{
+    content:url('./images/Rectangle.png'); /* with class ModalCarrot ??*/
+    position:absolute; /*or absolute*/
+    left:0;
+    top:10px;
+}
+
+.veterinarians::after{
+    content:url('./images/Rectangle1.png'); /* with class ModalCarrot ??*/
+    position:absolute; /*or absolute*/
+    right: 0;
+    top:10px;
+}
+
+.welcome .rabbit {
+    margin-left: 250px;
+}
+
+.welcome__title {
+    max-width: 565px;
+    font-size: 55px;
+    margin-top: 102px;
+    margin-bottom: 30px;
+
+    line-height: 1.2;
+}
+
+.welcome__subtitle {
+    font-size: 20px;
+    margin-bottom: 50px;
+
+    line-height: 1.4;
+    padding: 0 35px;
+}
+
+.veterinarians .btn {
+    display: inline-flex;
+    width: 130px;
+}
+
+.main .login {
+    color:#6f1eaa
+}
+
+/* principle */
+
+.product {
+    padding-bottom: 15px;
+}
+
+.product .container {
+    display: flex;
+}
+
+.create__principle {
+    padding: 10px;
+    margin-left: 30px;
+}
+
+.rule_title {
+    font-size: 44px;
+    font-weight: 500;
+    padding-right: 45px;
+    margin-bottom: 0;
+}
+
+.dog {
+    position:relative;
+    top: 27px;
+
+    max-width: 100%;
+    height: auto;
+
+    margin-top: 27px;
+}
+
+.order__rule {
+    max-width: 466px;
+    
+    padding-left: 100px;
+}
+
+.text__rule {
+    color: #6a1b9a;
+    font-size: 24px;
+}
+
+.text__desc {
+    font-size: 16px;
+    padding-bottom: 35px;
+    line-height: 142%;
+    border-bottom: 2px solid #ffb300;
+}
+
+/* Procedure */
+
+.how__work {
+    padding-top: 40px;
+    background-color: #faf9f6;
+}
+
+.how__work .container {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:30px;
+    flex-wrap: wrap;
+}
+
+.rule_text {
+    text-align: center;
+    padding-bottom: 65px;
+    font-weight: 400;
+}
+
+.procedure {
+    width: 359px;
+    height: 329px;
+}
+
+.box__img {
+    position: relative;
+    left:25%;
+    width:192px;
+    height: 192px;
+    background-color: #FFF7C2; 
+    border-radius: 50%;
+}
+
+.procedure-list__img {
+    position: relative;
+    right: 15px;
+    margin-top: 30px;
+    max-width: 224px;
+    padding-bottom: 32px;
+}
+
+.item__dog {
+    max-width: 192px;
+    margin-top: 3px;
+}
+.procedure--list__text {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.procedure-list__desk {
+    font-size: 16px;
+}
+
+.how__work .btn {
+    margin:50px 0 50px 0;
+}
+
+/* support owner dog */
+
+.about_us {
+    background-color: #f6f3fa;
+}
+
+.about_us .container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.owner {
+
+}
+
+.support_main {
+    margin-left: 50px;
+}
+
+.support_span {
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #f7a500;
+}
+
+.support_title {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 44px;
+}
+
+.support_desk {
+    margin-top: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 142%;
+}
+
+.about_us .btn {
+    margin-top: 35px;
+}
+
+/* blog */
+
+.blog {
+    padding-bottom: 160px;
+}
+
+
+.blog .container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feedback__title {
+    font-weight: 700;
+    font-size: 43px;
+    line-height: 123%;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.feedback__desk {
+    margin: 24px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 165%;
+    text-align: center;
+}
+
+.feedback__text::after {
+    margin: 0 auto;
+    content: url(./images/Heart.png);
+    position: relative;
+}
+
+.login {
+
+}
+
+.feedback__text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 1072px;
+    height: 354px;
+
+    background-color: #DFF5F6;
+    border-radius: 20px;
+
+    
+}
+
+.dog__mops {
+    margin: 58px 40px;
+}
+
+.text__desk {
+    display: flex;
+    flex-direction: column;
+    padding-right: 40px;
+    line-height: 160%;
+    max-width: 709px;
+}
+
+.socials-link {
+    margin-right: 16px;
+    padding-top: 2px;
+    
+}
+
+.text__author {
+    display: flex;
+    justify-content:flex-start;
+}
+
+/* careers */
+
+.careers {
+    background-color: #faf9f6;
+    padding-top: 10px;
+}
+
+.careers .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.box__article {
+    display: flex;
+    justify-content: space-around;
+    gap:32px;
+
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.box__article::before {
+    content: url(./images/recomend_before.png);
+    position:absolute;
+    left: 0;
+}
+
+.box__article::after {
+    content: url(./images/recomend_after.png);
+    position:absolute;
+    right: 0;
+}
+
+.recomend_main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    padding: 36px 0 36px 36px;
+    margin-top: -5px;
+    background-color: #fff;
+    border: #e8dcf8 solid 1px;
+    width: 384px;
+    height: 147px;
+}
+
+.recomend_title {
+    margin-bottom: 0;
+    font-size: 44px;
+    line-height: 120%;
+}
+
+.recomend_text {
+    text-align: center;
+    max-width: 576px;
+
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 175%;
+
+}
+
+.recomend_card {
+
+}
+
+.recomend_date {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 151%;
+    color: #f7a500;
+}
+
+.card-one {
+
+}
+
+.recomend__img-div {
+    width:100%;
+}
+
+.recomend_img {
+    width: 100%;
+    height: 100%;
+}
+
+.card_title {
+    font-weight: 400;
+    font-size: 24px;
+    margin: 15px 0 0 0;
+    
+}
+
+.card_text {   
+    margin-top: 15px;
+    font-weight: 400;
+    font-size: 11px;
+}
+
+.card-two .card_info {
+    
+}
+
+.card_info { 
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 119%;
+    color: #6f1eaa;
+}
+
+.careers .btn {
+    width: 160px;
+    margin-bottom: 60px;
+}
+
+/* Corporation */ 
+.corp {
+    background-color: #6F1EAA ;
+    padding: 40px 0;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* footer */
+
+.footer {
+    padding-top: 60px;
+    background-color: #48156D;
+}
+
+.footer a {
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+}
+
+.footer p {
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+    margin: 0px 0px 16px 0;
+}
+
+.footer span {
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+}
+
+.footer .footer__title {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    font-size: 12px;
+    color:#c282f0;
+}
+
+.footer li {
+    gap: 10px;
+}
+.footer .list-item {
+    margin-bottom: 15px;
+}
+
+.footer .container {
+    display: grid;
+    align-items: start;
+    justify-content: end;
+    grid-template-columns: 177px 177px 177px 177px 177px;
+    gap: 20px;
+    grid-template-areas: "nav contact york angeles socials";
+    padding-bottom: 60px;
+}
+
+.footer_nav {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.footer__inner-list {
+    padding: 0;
+    margin: 0;
+}
+
+
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.new_york {
+
+}
+
+.los_angeles {
+    
+}
+
+.footer__socials {
+
+}
+
+.footer__socials-icons {
+    display: flex;
+    gap:30px;
+    flex-wrap: wrap;
+}
+
+.footer__socials-link {
+}
+
+@media(max-width:1176px) {
+    .how__work  .container {
+        flex-direction: column;
+    }
+
+    .feedback__text {
+        width: auto;
+    }
+}
+
+@media(max-width:900px) {
+    .box__article::before {
+        display: none;
+    }
+    .box__article::after {
+        display: none;
+    }
+    .box__article {
+        max-width: auto;
+    }
+    .recomend_main {
+        width: auto;
+    }
+    
+    .card_info {
+        margin-top: auto;
+    }
+
+    .corp img {
+        max-width: 100px;
+    }
+
+    .text_sub {
+        font-size: 10px;
+    }
+    
+    .footer .container {
+        grid-template-columns: 120px 120px 120px 120px 120px
+    }
+}
