@@ -29,8 +29,8 @@ html, body {
     margin: 0 auto;
     padding: 0 15px;
     max-width: 1200px;
-
 }
+
 
 /* NAv */
 
@@ -215,4 +215,33 @@ html, body {
     line-height: 1.3;
 
     color: var(--text-color);
+}
+
+/* footer */
+
+.footer {
+    padding: 60px 0 50px;
+    background-color:  var(--dark-bg);
+    color: var(--header-text);
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 27px;
+}
+
+.social {
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+}
+
+.social__item {
+
+}
+
+.copywright {
+    font-size: 16px;
 }
