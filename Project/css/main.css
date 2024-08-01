@@ -47,7 +47,7 @@ html, body {
 
 .nav_row {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     column-gap: 30px;
     row-gap:  20px;
@@ -55,6 +55,7 @@ html, body {
 }
 
 .logo {
+    margin-right: auto;
     color: var(--header-text);
     font-size: 24px;
     font-family: 'Poppins' sans-serif;
@@ -99,6 +100,8 @@ html, body {
 /* Button */
 
 .dark-mode-btn {
+    order:1;
+
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -309,9 +312,6 @@ html, body {
     text-align: center;
 }
 
-.title-1 {
-
-}
 
 .project-details__cover {
     max-width: 100%;
@@ -379,9 +379,7 @@ html, body {
     align-items: center;
 }
 
-.social__item {
 
-}
 
 .copywright {
     font-size: 16px;
@@ -398,6 +396,16 @@ html, body {
 
     .header__title strong {
         font-size: 40px;
+    }
+
+    /* Nav */
+
+    .nav_row {
+        justify-content: space-between;
+    }
+
+    .dark-mode-btn {
+        order:0;
     }
 
     .section {
