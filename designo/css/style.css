@@ -1,0 +1,53 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&family=League+Spartan:wght:@700&family=Manrope:wght@400:600&display=swap');
+
+:root {
+    --font-family: "Jost", sans-serif;
+    --second-family: "Spartan", sans-serif;
+    --third-family: "Manrope", sans-serif;
+
+    --text-color: #333136;
+}
+
+
+body {
+    font-family: var(--font-family);
+}
+
+
+.container {
+    box-sizing: border-box;
+    width: 1110px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header menu */
+.header {
+    padding: 65px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo_img {
+    max-width: 196px ;
+}
+
+.header_nav {
+    
+}
+
+.header_nav-list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 42px;
+}
+
+.header_nav-item {
+    font-size: 14px;
+    color: var(--text-color);
+}
