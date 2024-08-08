@@ -91,9 +91,9 @@ body {
     max-width: 1440px;
     margin: 0px auto;
 
-    background-image: url(../images/body_bg_top.png), url(../images/body_bg_bottom.png) ;
+    background-image: url(../images/body_bg_top.png);
     background-repeat: no-repeat;
-    background-position: left top 320px, right bottom 74px;
+    background-position: left top 320px;
 }
 
 .hero_content {
@@ -155,32 +155,106 @@ body {
 /* Product list */
 
 .products {
-
+    margin-bottom: 160px;
 }
-
 
 .products .container {
     width:100%;
     display: flex;
+    gap: 30px;
+}
+
+.products article div {
+    border-radius: inherit;
+    width: inherit;
+    height: 100%;
+
+    transition: background 0.5s ease-in-out;
+}
+
+.products article:hover div{
+    background-color: rgba(231, 130, 107, 0.8);
 }
 
 .product__content-item {
+    width:100%;
+}
 
+.product__content-item.product {
+    min-height: 640px;
+    background-image: url(../images/web.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+div.product__content-item article.product {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+div.product__content-item article.product:nth-child(1) {
+    background-image: url(../images/app.jpg);
+}
+div.product__content-item article.product:nth-child(2) {
+    background-image: url(../images/graphic.jpg);
+}
+
+div.product__content-item {
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+}
+
+.product div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .product {
+    gap: 24px;
+
     max-width:540px;
     width:100%;
     height: 308px;
+
+    border-radius: 15px;
     background-color: var(--dark-gray);
 }
 
-.product_item {
-
-}
-
-
+/* .product_title:hover {
+    opacity: 0.5;
+    z-index: 1;
+    background-color: var(--peach);
+    
+} */
 
 .card_title {
-
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 120%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color:var(--white);
 }
+
+
+.products a {
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.33em;
+    text-transform: uppercase;
+    color: var(--white);
+
+    padding-right: 21px ;
+
+    background-image: url(../images/arrow_right.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+
+
