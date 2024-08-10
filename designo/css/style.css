@@ -38,6 +38,7 @@ body {
 
     font-weight: 500;
     font-size: 15px;
+    text-align: center;
     letter-spacing: 0.07em;
     text-transform: uppercase;
 
@@ -91,9 +92,9 @@ body {
     max-width: 1440px;
     margin: 0px auto;
 
-    background-image: url(../images/body_bg_top.png);
+    background-image: url(../images/body_bg_top.png), url(../images/body_bg_bottom.png);
     background-repeat: no-repeat;
-    background-position: left top 320px;
+    background-position: left top 320px, right bottom 74px;
 }
 
 .hero_content {
@@ -155,7 +156,7 @@ body {
 /* Product list */
 
 .products {
-    margin-bottom: 160px;
+    min-height: 960px;
 }
 
 .products .container {
@@ -225,13 +226,6 @@ div.product__content-item {
     background-color: var(--dark-gray);
 }
 
-/* .product_title:hover {
-    opacity: 0.5;
-    z-index: 1;
-    background-color: var(--peach);
-    
-} */
-
 .card_title {
     font-weight: 500;
     font-size: 40px;
@@ -256,5 +250,112 @@ div.product__content-item {
     background-position: right center;
 }
 
+/* section props */
 
 
+.props .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.props_item {
+    width: 350px;
+    text-align: center;
+    min-height: 792px;
+}
+
+
+.props_icon {
+    margin-bottom: 48px;
+}
+
+.props_item h2 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 0.25em;
+    color: var(--dark-gray);
+    margin-bottom: 32px;
+}
+
+.props_item p {
+    font-size: 16px;
+    line-height: 162%;
+    color: var(--dark-gray);
+}
+
+.footer {
+    min-height: 393px;
+    background-color: var(--black);
+    position: relative;
+    padding-top: 140px;
+}
+
+.touch {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 310px;
+
+    height: 292px;
+    max-width: 1110px;
+    width:100%;
+
+    border-radius: 15px;
+
+    background: url(../images/Touch-bg.png) , var(--peach);
+    background-repeat: no-repeat;
+    background-position: right center;
+
+    position: absolute;
+    top: -220px;
+
+    padding-left: 94px;
+    padding-right: 94px;
+}
+
+.touch_content h2 {
+    max-width: 270px;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 40px;
+    color: var(--white);
+    margin-bottom: 18px;
+}
+
+.touch_content p {
+    max-width: 460px;
+    line-height: 26px;
+    color: var(--white);
+}
+
+.touch .btn:hover {
+    background-color: var(--light-peach);
+    color: var(--white);
+}
+
+.footer_nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .logo_img {
+    width: 202px;
+}
+
+.footer_nav-list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 42px;
+}
+
+.footer_nav-item {
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0.14em;
+    color: var(--white);
+}
