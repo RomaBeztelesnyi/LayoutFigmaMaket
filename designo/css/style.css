@@ -409,5 +409,6 @@ div.product__content-item {
 }
 
 .info_social svg:hover {
-    filter: brightness(0) saturate(100%) invert(97%) sepia(76%) saturate(4700%) hue-rotate(293deg) brightness(96%) contrast(111%);
+    /* filter: brightness(0) saturate(100%) invert(97%) sepia(76%) saturate(4700%) hue-rotate(293deg) brightness(96%) contrast(111%); */
+    fill: rgb(255, 173, 155);
 }
