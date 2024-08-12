@@ -156,7 +156,7 @@ body {
 /* Product list */
 
 .products {
-    min-height: 960px;
+    min-height: 800px;
 }
 
 .products .container {
