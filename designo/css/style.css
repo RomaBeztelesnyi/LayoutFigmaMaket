@@ -487,6 +487,9 @@ div.product__content-item {
 
 
 .webd .works__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width:350px;
     height: 478px;
 
@@ -494,6 +497,8 @@ div.product__content-item {
     background-color: #FDF3F0;
 }
 
+/* .webd .works div {
+} */
 
 .webd .works h3 {
     padding-top: 32px;
@@ -509,7 +514,7 @@ div.product__content-item {
 
 .webd .works p {
 
-    margin: 16px 32px 32px 32px;
+    margin: 16px;
     max-width: 286px;
     font-weight: 400;
     font-size: 16px;
