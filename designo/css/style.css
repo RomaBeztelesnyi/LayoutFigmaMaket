@@ -24,7 +24,8 @@ body {
 
 .container {
     box-sizing: border-box;
-    max-width: 1110px;
+    max-width: 1130px;
+    padding: 0 10px;
     margin: 0 auto;
 }
 
@@ -159,6 +160,7 @@ body {
     min-height: 800px;
 }
 
+
 .products .container {
     width:100%;
     display: flex;
@@ -169,7 +171,7 @@ body {
     border-radius: inherit;
     width: inherit;
     height: 100%;
-
+    
     transition: background 0.5s ease-in-out;
 }
 
@@ -208,6 +210,7 @@ div.product__content-item {
     gap:24px;
 }
 
+
 .product div {
     display: flex;
     flex-direction: column;
@@ -217,11 +220,11 @@ div.product__content-item {
 
 .product {
     gap: 24px;
-
+    
     max-width:540px;
     width:100%;
     height: 308px;
-
+    
     border-radius: 15px;
     background-color: var(--dark-gray);
 }
@@ -242,9 +245,9 @@ div.product__content-item {
     letter-spacing: 0.33em;
     text-transform: uppercase;
     color: var(--white);
-
+    
     padding-right: 21px ;
-
+    
     background-image: url(../images/arrow_right.svg);
     background-repeat: no-repeat;
     background-position: right center;
@@ -286,6 +289,8 @@ div.product__content-item {
     color: var(--dark-gray);
 }
 
+/* Footer */
+
 .footer {
     min-height: 393px;
     background-color: var(--black);
@@ -299,20 +304,20 @@ div.product__content-item {
     align-items: center;
     flex-wrap: wrap;
     column-gap: 310px;
-
+    
     height: 292px;
     max-width: 1110px;
     width:100%;
-
+    
     border-radius: 15px;
-
+    
     background: url(../images/Touch-bg.png) , var(--peach);
     background-repeat: no-repeat;
     background-position: right center;
-
+    
     position: absolute;
     top: -220px;
-
+    
     padding-left: 94px;
     padding-right: 94px;
 }
@@ -381,7 +386,7 @@ div.product__content-item {
     font-size: 16px;
     line-height: 26px;
     font-weight: 700;
-
+    
     color: rgba(255, 255, 255, 0.5)
 }
 
@@ -391,7 +396,7 @@ div.product__content-item {
     font-size: 16px;
     line-height: 26px;
     font-weight: 400;
-
+    
     color: rgba(255, 255, 255, 0.5)
 }
 
@@ -404,11 +409,110 @@ div.product__content-item {
     justify-content: end;
     align-items: end;
     column-gap: 16px;
-
+    
     height: 78px;
+}
+
+.info_social svg {
+    transition: 0.2s ease-in;
 }
 
 .info_social svg:hover {
     /* filter: brightness(0) saturate(100%) invert(97%) sepia(76%) saturate(4700%) hue-rotate(293deg) brightness(96%) contrast(111%); */
     fill: rgb(255, 173, 155);
+}
+
+/* WEBD.HTML */
+
+.webd .main_touch  {
+    margin-bottom: 160px;
+}
+.webd .main {
+    
+}
+
+.webd .main_touch {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 310px;
+    
+    height: 292px;
+    max-width: 1110px;
+    width:100%;
+    
+    border-radius: 15px;
+    
+    background: url(../images/Touch-bg.png) , var(--peach);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.webd .main_touch-content h2 {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 100%;
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 25px;
+}
+
+.webd .main_touch-content  {
+    max-width: 430px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    text-align: center; 
+    color:var(--white);
+}
+
+
+.webd .products {
+    min-height: 630px;
+}
+
+.webd div.product__content-item {
+    flex-direction: row;
+}
+
+.works {
+    display: flex; 
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 32px;
+
+    margin-bottom: 160px;
+}
+
+
+.webd .works__item {
+    width:350px;
+    height: 478px;
+
+    border-radius: 15px;
+    background-color: #FDF3F0;
+}
+
+
+.webd .works h3 {
+    padding-top: 32px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 0.25em;
+    text-align: center;
+    color: var(--peach);
+
+    text-transform: uppercase;
+}
+
+.webd .works p {
+
+    margin: 16px 32px 32px 32px;
+    max-width: 286px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    text-align: center;
 }
