@@ -200,8 +200,17 @@ div.product__content-item article.product {
 div.product__content-item article.product:nth-child(1) {
     background-image: url(../images/app.jpg);
 }
+
+.app div.product__content-item article.product:nth-child(1) {
+    background-image: url(../images/web.png);
+}
+
 div.product__content-item article.product:nth-child(2) {
     background-image: url(../images/graphic.jpg);
+}
+
+.grd div.product__content-item article.product:nth-child(2) {
+    background-image: url(../images/web.png);
 }
 
 div.product__content-item {
