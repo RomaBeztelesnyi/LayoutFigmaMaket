@@ -713,3 +713,73 @@ div.product__content-item {
     font-size: 16px;
     line-height: 26px;
 }
+
+.main.loc {
+    background: none;
+}
+/* location page */
+
+.location {
+    display: flex;
+    flex-direction: column;
+    row-gap:32px;
+    margin-bottom: 380px;
+}
+
+.locations__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.locations__item img {
+    border-radius: 15px;
+}
+
+.locations__item article { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 730px;
+    width: 100%;
+    min-height: 326px;
+    background-color: #FDF3F0 ;
+    border-radius: 15px;
+    background-image: url(../images/geo/geo_oval.png), url(../images/geo/geo_oval.png);
+    background-repeat: no-repeat;
+    background-position: left bottom, left 292px bottom;
+}
+
+.locations__item address {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 30px;
+    font-style: inherit;
+}
+
+.locations__item:nth-child(2) article {
+    order:1;
+}
+
+.locations__item h2 {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    color: var(--peach);
+    margin-bottom: 24px;
+}
+.locations__item h3 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+}
+.locations__item p {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.locations__item address div {
+    width: 255px;
+}
