@@ -545,3 +545,171 @@ div.product__content-item {
     text-align: center;
     width: 286px;
 }
+
+/* Section About_us */
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 480px;
+    border-radius: 15px;
+    background-color: var(--peach);
+
+    background-image: url(../images/about_us/about_Oval.svg), url(../images/about_us/about__us.jpg);
+    background-repeat:no-repeat;
+    background-position: left center, right center;
+    margin-bottom: 160px;
+}
+
+.about_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 32px;
+    margin-left: 95px;
+    max-width: 460px
+}
+
+.about_info h2 {
+    font-weight: 500;
+    font-size: 48px;
+    color: var(--white)
+}
+
+.about_info p {
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--white);
+    line-height: 26px;
+}
+
+/* section Talent */
+
+.talent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 15px;
+    background-color: #fdf3fd;
+    margin-bottom: 160px;
+    padding: 0;
+    background-image: url(../images/about_us/talent_oval.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.talent_bg {
+    max-width: 476px;
+    width: 100%;
+    height: 640px;
+    background-image: url(../images/about_us/talent.jpg);
+    background-repeat: no-repeat;
+    
+}
+
+.talent_info {
+    margin-right: 90px;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 24px;
+   
+}
+.talent_info h2 {
+    max-width: 445px;
+    font-weight: 500;
+    font-size: 48px;
+    color: var(--peach)
+}
+.talent_info p {
+    max-width: 445px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+}
+
+/* geo about_us */
+
+.geo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 160px;
+}
+
+.geo_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 32px;
+}
+
+.geo_item img {
+    margin-bottom: 16px;
+}
+
+.geo_item h3 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 5px;
+    line-height: 26px;
+}
+
+.geo .btn {
+    font-weight: 500;
+    font-size: 15px;
+    background-color: var(--peach);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.geo .btn:hover {
+    background-color: var(--light-peach);
+}
+
+/* deal section */
+
+.deal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 640px;
+    border-radius: 15px;
+    background-color: #fdf3fd;
+
+    background-image: url(../images/about_us/deal_oval.svg), url(../images/about_us/deal.jpg);
+    background-repeat:no-repeat;
+    background-position: left bottom, right center;
+    margin-bottom: 380px;
+}
+
+.deal_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 32px;
+    margin:0 94px;
+    max-width: 460px
+}
+
+.deal_info h2 {
+    max-width: 445px;
+    font-weight: 500;
+    font-size: 48px;
+    color: var(--peach)
+}
+.deal_info p {
+    max-width: 445px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+}
