@@ -19,7 +19,7 @@ body {
 
 .container {
     box-sizing: border-box;
-    max-width: 1130px;
+    max-width: 1110px;
     padding: 0 10px;
     margin: 0 auto;
 }
@@ -297,18 +297,16 @@ div.product__content-item {
 /* Footer */
 
 .footer {
-    min-height: 393px;
     background-color: var(--black);
     position: relative;
-    padding-top: 140px;
+    padding-bottom: 80px;
 }
 
 .touch {
     display: flex;
-    justify-content:center;
+    justify-content:space-between;
     align-items: center;
-    flex-wrap: wrap;
-    column-gap: 310px;
+    
     
     height: 292px;
     max-width: 1110px;
@@ -318,10 +316,10 @@ div.product__content-item {
     
     background: url(../images/Touch-bg.png) , var(--peach);
     background-repeat: no-repeat;
-    background-position: right center;
+    background-position: right center, center center;
     
-    position: absolute;
-    top: -220px;
+    position: relative;
+    top: -190px;
     
     padding-left: 94px;
     padding-right: 94px;
@@ -493,7 +491,7 @@ div.product__content-item {
 .webd .works__item {
     display: flex;
     flex-direction: column;
-    width:350px;
+    width: 340px;
     height: 478px;
 
     border-radius: 15px;
@@ -887,17 +885,23 @@ footer.contact {
     
 }
 
+
+
 @media(max-width:768px) {
     .main {
         background-image: none;
     }
 
+    .container {
+        max-width: 730px;
+        padding: 0 30px;
+    }
 
     .hero_content .container {
         flex-direction: column;
+
         background-position: center bottom -120px, right center;
         min-height: 890px;
-        margin: 0 10px;
     }
 
     .products .container {
@@ -933,28 +937,44 @@ footer.contact {
     }
 
 
-    /* .props .container {
+    .props .container {
         flex-direction: column;
+        column-gap: 32px;
+        margin-bottom: 210px;
     }
 
     .props_item {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-       
+        align-items: center;
+        width: 100%;
         min-height: 202px;
+        gap:48px;
     }
+
+    .props_text {
+        text-align: left;
+    }
+
     .props_icon {
         height: 202px;
     }
 
     .touch {
-        position: relative;
-        
+        flex-direction: column;
+        justify-content: space-around
     }
 
-    .footer {
-        padding-top: 0;
-    } */
+    .touch_content {
+        text-align: center;
+    }
+
+    .touch_content h2 {
+        position: relative;
+        right: -82px;
+    }
+    
+
 }
 
