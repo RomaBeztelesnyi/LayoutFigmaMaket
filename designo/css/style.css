@@ -886,3 +886,75 @@ footer.contact {
     color: var(--white);
     
 }
+
+@media(max-width:768px) {
+    .main {
+        background-image: none;
+    }
+
+
+    .hero_content .container {
+        flex-direction: column;
+        background-position: center bottom -120px, right center;
+        min-height: 890px;
+        margin: 0 10px;
+    }
+
+    .products .container {
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .hero_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 326px;
+        text-align: center;
+        padding-top: 60px;
+
+    }
+    .hero_title {
+        font-size: 44px;
+    }
+
+    .products article{
+        max-width: 100%;
+        min-height: 200px;
+    }
+
+    .product__content-item.product {
+        min-height: 20px;
+    }
+
+    .products {
+        margin-bottom: 120px;
+    }
+
+
+    /* .props .container {
+        flex-direction: column;
+    }
+
+    .props_item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+       
+        min-height: 202px;
+    }
+    .props_icon {
+        height: 202px;
+    }
+
+    .touch {
+        position: relative;
+        
+    }
+
+    .footer {
+        padding-top: 0;
+    } */
+}
+
