@@ -1,9 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&family=League+Spartan:wght:@700&family=Manrope:wght@400:600&display=swap');
-
 :root {
     --font-family: "Jost", sans-serif;
-    --second-family: "Spartan", sans-serif;
-    --third-family: "Manrope", sans-serif;
 
     --black: #1D1C1E;
     --dark-gray: #333136;
@@ -622,6 +618,7 @@ div.product__content-item {
 }
 .talent_info h2 {
     max-width: 445px;
+
     font-weight: 500;
     font-size: 48px;
     color: var(--peach)
@@ -679,15 +676,15 @@ div.product__content-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    margin-bottom: 380px;
     height: 640px;
+
     border-radius: 15px;
     background-color: #fdf3fd;
-
     background-image: url(../images/about_us/deal_oval.svg), url(../images/about_us/deal.jpg);
     background-repeat:no-repeat;
     background-position: left bottom, right center;
-    margin-bottom: 380px;
+    
 }
 
 .deal_info {
@@ -732,7 +729,7 @@ div.product__content-item {
     width: 100%;
 }
 
-.locations__item img {
+.locations__item iframe {
     border-radius: 15px;
 }
 
@@ -743,6 +740,7 @@ div.product__content-item {
     max-width: 730px;
     width: 100%;
     min-height: 326px;
+
     background-color: #FDF3F0 ;
     border-radius: 15px;
     background-image: url(../images/geo/geo_oval.png), url(../images/geo/geo_oval.png);
@@ -781,4 +779,110 @@ div.product__content-item {
 
 .locations__item address div {
     width: 255px;
+}
+/* contact page */
+
+.main.contact {
+    background: none;
+}
+
+
+footer.contact {
+    padding-top: 72px;
+}
+
+
+.contact_form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 55px 95px;
+    margin-bottom: 160px;
+    min-height: 480px;
+
+    background-color: var(--peach);
+    background-image: url(../images/contact/contact_oval.png);
+    background-repeat: no-repeat;
+    border-radius: 15px;
+}
+
+.contact_text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    max-width: 445px;
+}
+.contact_text h1 {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 48px;
+    color: var(--white);
+}
+.contact_text p {
+    max-width: 445px;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--white);
+}
+
+.contact_form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    row-gap: 25px;
+    max-width: 380px;
+    width:100%;
+
+    color:var(--white);
+}
+
+
+.contact_form input,
+.contact_form textarea {
+    width: 100%;
+    border:none;
+    background-color: transparent;
+    outline: none;
+    border-bottom: 1px solid #fff;
+}
+
+.contact_form input {
+    height: 38px;
+    padding: 0 16px 11px 16px;
+}
+
+.contact_form textarea {
+    padding: 0 16px 11px 16px;
+    height: 102px;
+}
+
+*::placeholder {
+    color: var(--white);
+    opacity: 0.5;
+}
+
+.contact_form button {
+    align-self: flex-end;
+
+    width: 152px;
+    height: 56px;
+
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+
+    background-color: var(--white);
+    color: var(--dark-gray);
+    border-radius: 8px;
+
+    transition: all .2s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+}
+
+.contact_form form button:hover {
+    background-color: var(--light-peach);
+    color: var(--white);
+    
 }
