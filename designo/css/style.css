@@ -894,13 +894,12 @@ footer.contact {
 
     .container {
         max-width: 730px;
-        padding: 0 30px;
     }
 
     .hero_content .container {
         flex-direction: column;
 
-        background-position: center bottom -120px, right center;
+        background-position: center bottom -120px, right -127px bottom 144px;
         min-height: 890px;
     }
 
@@ -935,7 +934,6 @@ footer.contact {
     .products {
         margin-bottom: 120px;
     }
-
 
     .props .container {
         flex-direction: column;
@@ -975,6 +973,73 @@ footer.contact {
         right: -82px;
     }
     
+    /* wed disign adaptive page */
+    .webd .main_touch {
+        max-width: 730px;
+        margin-bottom: 120px;
+    }
 
+    .webd .works {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 120px;
+    }
+
+    .webd .works__item {
+        flex-direction: row;
+        max-width: 689px;
+        height: 310px;
+        width: 100%;
+    } 
+    
+    .webd .works div {
+        align-items: center;
+        height: auto;
+    }
+
+    .webd .works__item img {
+        min-height: 310px;
+    }
+
+    .webd .works__item p {
+        width: auto;
+        padding: 0 40px;
+    }
+
+    .webd .product {
+        height: 200px;
+    }
+     
+    .webd div.product__content-item {
+        flex-direction: column;
+    }
+
+    .app .works__item img {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-top-right-radius: 170px;
+    }
+    .grd .works__item img {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-top-right-radius: 170px;
+    }
+    
+    .about {
+        /* align-items: flex-end; */
+        height: 632px;  
+        background-color: var(--peach);
+        background-image: url(../images/about_us/about_us_adapt.png);
+        background-position: center top;
+        background-size:contain;
+        margin-bottom: 160px;
+    }
+
+    .about_info {
+        
+    }
+
+    .about_info p {
+    }
 }
 
