@@ -474,8 +474,8 @@
 }
 
 @media(max-width:350px) {
-    .hero_desk p {
-        width: 320px;
+    .hero_desk  {
+        max-width: 320px;
     }
 
     .webd .works__item {
