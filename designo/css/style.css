@@ -56,8 +56,46 @@ body {
     align-items: center;
 }
 
+.header__burger {
+    position: relative;
+    display: none;
+    width: 40px;
+    height: 24px;
+    border: none;
+}
+
+.header__burger span {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    left:5px;
+    transition: transform .5s;
+}
+
+.header__burger span:nth-child(1) {
+    transform: translateY(-10px);
+}
+
+.header__burger span:nth-child(3) {
+    transform: translateY(10px);
+}
+
+
+.header.open .header__burger span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+}
+.header.open .header__burger span:nth-child(2) {
+    opacity: 0;
+}
+.header.open .header__burger span:nth-child(3) {
+    transform: translateX(0) rotate(-45deg);
+}
+
+
+
 .logo_img {
-    width: 196px ;
+    max-width: 196px ;
 }
 
 
@@ -532,7 +570,6 @@ div.product__content-item {
 
 .webd .works__item p {
     margin: 0 auto;
-    font-weight: 400;
     font-size: 16px;
     line-height: 26px;
     text-align: center;
@@ -884,162 +921,3 @@ footer.contact {
     color: var(--white);
     
 }
-
-
-
-@media(max-width:768px) {
-    .main {
-        background-image: none;
-    }
-
-    .container {
-        max-width: 730px;
-    }
-
-    .hero_content .container {
-        flex-direction: column;
-
-        background-position: center bottom -120px, right -127px bottom 144px;
-        min-height: 890px;
-    }
-
-    .products .container {
-        flex-wrap: wrap;
-        gap: 24px;
-    }
-
-    .hero_text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        min-height: 326px;
-        text-align: center;
-        padding-top: 60px;
-
-    }
-    .hero_title {
-        font-size: 44px;
-    }
-
-    .products article{
-        max-width: 100%;
-        min-height: 200px;
-    }
-
-    .product__content-item.product {
-        min-height: 20px;
-    }
-
-    .products {
-        margin-bottom: 120px;
-    }
-
-    .props .container {
-        flex-direction: column;
-        column-gap: 32px;
-        margin-bottom: 210px;
-    }
-
-    .props_item {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        min-height: 202px;
-        gap:48px;
-    }
-
-    .props_text {
-        text-align: left;
-    }
-
-    .props_icon {
-        height: 202px;
-    }
-
-    .touch {
-        flex-direction: column;
-        justify-content: space-around
-    }
-
-    .touch_content {
-        text-align: center;
-    }
-
-    .touch_content h2 {
-        position: relative;
-        right: -82px;
-    }
-    
-    /* wed disign adaptive page */
-    .webd .main_touch {
-        max-width: 730px;
-        margin-bottom: 120px;
-    }
-
-    .webd .works {
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 120px;
-    }
-
-    .webd .works__item {
-        flex-direction: row;
-        max-width: 689px;
-        height: 310px;
-        width: 100%;
-    } 
-    
-    .webd .works div {
-        align-items: center;
-        height: auto;
-    }
-
-    .webd .works__item img {
-        min-height: 310px;
-    }
-
-    .webd .works__item p {
-        width: auto;
-        padding: 0 40px;
-    }
-
-    .webd .product {
-        height: 200px;
-    }
-     
-    .webd div.product__content-item {
-        flex-direction: column;
-    }
-
-    .app .works__item img {
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
-        border-top-right-radius: 170px;
-    }
-    .grd .works__item img {
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
-        border-top-right-radius: 170px;
-    }
-    
-    .about {
-        /* align-items: flex-end; */
-        height: 632px;  
-        background-color: var(--peach);
-        background-image: url(../images/about_us/about_us_adapt.png);
-        background-position: center top;
-        background-size:contain;
-        margin-bottom: 160px;
-    }
-
-    .about_info {
-        
-    }
-
-    .about_info p {
-    }
-}
-

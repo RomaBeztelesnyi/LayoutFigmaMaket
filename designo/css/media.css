@@ -1,0 +1,513 @@
+@media(max-width:768px) {
+    .main {
+        background-image: none;
+    }
+
+    .container {
+        max-width: 730px;
+    }
+
+    .hero_content .container {
+        flex-direction: column;
+
+        background-position: center bottom -120px, right -127px bottom 144px;
+        min-height: 890px;
+    }
+
+    .products .container {
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .hero_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 326px;
+        text-align: center;
+        padding-top: 60px;
+
+    }
+    .hero_title {
+        font-size: 44px;
+    }
+
+    .products article{
+        max-width: 100%;
+        min-height: 200px;
+    }
+
+    .product__content-item.product {
+        min-height: 20px;
+    }
+
+    .products {
+        margin-bottom: 120px;
+    }
+
+    .props .container {
+        flex-direction: column;
+        column-gap: 32px;
+        margin-bottom: 210px;
+    }
+
+    .props_item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        min-height: 202px;
+        gap:48px;
+    }
+
+    .props_text {
+        text-align: left;
+    }
+
+    .props_icon {
+        height: 202px;
+    }
+
+    .touch {
+        flex-direction: column;
+        justify-content: space-around
+    }
+
+    .touch_content {
+        text-align: center;
+    }
+
+    .touch_content h2 {
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    /* wed disign adaptive page */
+    .webd .main_touch {
+        max-width: 730px;
+        margin-bottom: 120px;
+    }
+
+    .webd .works {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 120px;
+    }
+
+    .webd .works__item {
+        flex-direction: row;
+        max-width: 689px;
+        height: 310px;
+        width: 100%;
+    } 
+    
+    .webd .works div {
+        align-items: center;
+        height: auto;
+    }
+
+    .webd .works__item img {
+        min-height: 310px;
+    }
+
+    .webd .works__item p {
+        width: auto;
+        padding: 0 40px;
+    }
+
+    .webd .product {
+        height: 200px;
+    }
+     
+    .webd div.product__content-item {
+        flex-direction: column;
+    }
+
+    .app .works__item img {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-top-right-radius: 170px;
+    }
+    .grd .works__item img {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-top-right-radius: 170px;
+    }
+    
+    .about {
+        align-items: flex-end;
+        height: 640px;
+        background-image: url(../images/about_us/about_us_adapt.png);
+        background-position: center top;
+        background-size: contain;
+        margin-bottom: 120px;
+    }
+
+    .about_info {
+        margin: 0 55px;
+        max-width: 575px;
+        align-items: center;
+    }
+
+    .about_info p {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .talent {
+        flex-direction: column;
+        margin-bottom: 120px;
+        padding: 0;
+        background-repeat: no-repeat;
+        background-position: center bottom 50px;
+    }
+    
+    .talent_bg {
+        max-width: 730px;
+        width: 100%;
+        height: 320px;
+        background-image: url(../images/about_us/talent_adapt.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    
+    .talent_info {
+        align-items: center;
+        max-width: 570px;
+        margin: 70px 0;
+    }
+    
+    .talent_info p {
+        margin: 0 55px;
+        text-align: center;
+        max-width: 572px;
+        
+    }
+    
+    .deal {
+        justify-content: space-around;
+        align-items: flex-end;
+        height: 735px;
+        background-image:url(../images/about_us/deal_oval.svg), url(../images/about_us/deal_adaptive.jpg);
+        background-position: right 20px bottom 50px ,center top;
+        background-size:auto, contain;
+        margin-bottom: 280px;
+    }
+
+    .deal_info {
+        margin: 0 55px;
+        max-width: 575px;
+        align-items: center;
+        padding-bottom: 60px;
+    }
+
+    .deal p {
+        max-width: 575px;
+        text-align: center;
+    }
+
+    .geo {
+        flex-direction: column;
+        row-gap: 80px;
+    }
+
+    .location {
+        margin-bottom: 280px;
+    }
+
+    .locations__item {
+        flex-direction: column-reverse;
+        row-gap: 30px;
+    }
+    .locations__item iframe {
+        max-width: 689px;
+        width: 100%;
+    }
+
+    .locations__item:nth-child(2) article {
+        order:0;
+    }
+    
+    .contact_form {
+        flex-direction: column;
+        background-position: right 229px top;
+    }
+    
+    .contact_text {
+        margin-bottom: 40px;
+        max-width: 573px;
+    }
+
+    .contact_text p {
+        max-width: 100%;
+    }
+
+    .contact_form form {
+        max-width: 538px;
+    }
+}
+
+@media (max-width:615px) {
+    .footer_nav .container {
+        flex-direction: column;
+    }
+    .footer_nav {
+        border-bottom: none;
+    }
+    .footer_nav-list {
+        align-items: center;
+        flex-direction: column;
+        row-gap: 32px;
+    }
+
+    .footer_nav .logo_img {
+        padding-bottom: 40px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 40px;
+    }
+
+    .footer_info .container {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 40px;
+    }
+
+    .info_item {
+        text-align: center;
+    }
+
+    .info_item .contact p {
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    .info_social {
+        height: 100%;
+    }
+
+    .locations__item h2 {
+        text-align: center;
+        max-width: 327px;
+    }
+}
+
+@media (max-width:540px) {
+    .header.open .header_nav {
+        transform: translateX(100%);
+    }
+
+    .header__burger {
+        display: block;
+    }
+
+    .header_nav {
+        position: absolute;
+        left: -540px;
+        top: 154px;
+        width: 540px;
+        max-width: 100%;
+        background-color: var(--black);
+        
+        padding: 20px 20px 20px 20px;
+
+        transition: tranform .5s;
+    }
+
+    .header_nav-list {
+        display: block;
+        font-size: 24px;
+        
+    }
+
+    .header_nav-item {
+        color: var(--white);
+        padding: 15px;
+    }
+
+   
+
+    .props .container {
+        margin-bottom: 280px;
+    }
+
+    .props_item {
+        flex-direction: column;
+        text-align: center;
+        gap:0;
+        margin-bottom: 80px;
+    }
+
+    .props_text {
+        text-align: center;
+        max-width: 327px;
+    }
+
+    .webd .works__item {
+        flex-direction: column;
+        width: 340px;
+        height: 478px;
+    }
+    
+    .webd .works div {
+        height: 158px;
+        gap: 16px;
+    }
+
+    .locations__item {
+        row-gap: 0;
+    }
+
+    .locations__item address {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+   
+}
+
+@media(max-width:445px) {
+    .hero_content {
+        background-position: center bottom -120px, right -240px bottom 166px;
+        min-height: 840px;
+    }
+
+    .hero_title {
+        max-width: 327px;
+        min-height: auto;
+        font-size: 30px;
+    }
+
+    .hero_desk {
+        max-width: 327px;
+        font-size: 15px;
+        margin-bottom: 24px;
+    }
+
+    .card_title {
+        font-size: 28px;
+    }
+
+    .touch {
+        height: 380px;
+        background-repeat: repeat;
+
+        padding: 60px 20px;
+    }
+
+    .touch_content h2 {
+        width: 279px;
+        font-size: 32px;
+    }
+
+    .touch_content p {
+        width: 282px;
+    }
+
+    .webd .main_touch-content h2 {
+        font-size: 32px;
+    }
+
+    .webd .main_touch-content p {
+        max-width: 350px;
+    }
+
+    .about {
+        height: 715px;
+        margin-bottom: 0;
+        border-radius: 0px;
+        background-image: url(../images/about_us/about_us_mobile.jpg);
+    }
+
+    .about_info h2 {
+        font-size: 32px;
+    }
+
+    .talent_bg {
+        background-image: url(../images/about_us/talent_mobile.jpg);
+    }
+
+    .deal {
+        height: 865px;
+        background-size: contain;
+    }
+
+    .deal_bg {
+        max-width: 375px;
+        width: 100%;
+        height: 320px;
+        background-image: url(../images/about_us/deal_mobile.jpg);
+    }
+
+    .deal_info {
+        justify-content:flex-end;
+        height: 545px;
+    }
+
+    .deal_info h2 {
+        font-size: 32px;
+    }
+
+    .locations__item h2 {
+        font-size: 32px;
+    }
+
+    .contact_text h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .contact_text p {
+        text-align: center;
+        width: 327px;
+    }
+
+    .contact_form form {
+        width: 327px;
+    } 
+
+    .contact_form button {
+        align-self: center;
+    }
+}
+
+@media(max-width:350px) {
+    .hero_desk p {
+        width: 320px;
+    }
+
+    .webd .works__item {
+        max-width: 100%;
+        width: 320px
+    }
+
+    .about_info {
+        margin: 0;
+    }
+
+    .about_info p {
+        margin-bottom: 80px;
+    }
+
+    .talent_info h2 {
+        text-align: center;
+    }
+
+    .talent_info p {
+        margin: 0;
+        max-width: 327px;
+    }
+
+    .deal {
+        flex-direction: column;
+        background-image: url(../images/about_us/deal_oval.svg); 
+        background-position: right 20px bottom 50px;
+    }
+
+    .deal_info {
+        max-width: 327px;
+        margin: 0;
+    }
+}
