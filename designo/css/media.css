@@ -189,19 +189,19 @@
     
     .deal {
         flex-direction: column;
-        justify-content: space-around;
-        align-items: flex-end;
         height: 735px;
         background-image:url(../images/about_us/deal_oval.svg);
         background-position: right 20px bottom 50px;
         background-size:auto, contain;
         margin-bottom: 280px;
     }
-
+    
     .deal_bg {
+        max-width: 768px;
         width: 100%;
         height: 320px;
-        background-image: url(../images/about_us/deal_mobile.jpg);
+        background-image: url(../images/about_us/deal_adaptive.jpg);
+        background-repeat: no-repeat;
     }
 
     .deal_info {
@@ -441,6 +441,7 @@
     }
 
     .deal {
+        flex-direction: column;
         height: 865px;
         background-size: contain;
     }
