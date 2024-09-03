@@ -300,7 +300,7 @@
     }
 
     .header__burger {
-        display: block;
+        display: inline-block;
     }
 
     .header_nav {
@@ -427,6 +427,10 @@
 
     .talent_bg {
         background-image: url(../images/about_us/talent_mobile.jpg);
+    }
+
+    .talent_info h2 {
+        font-size: 32px;
     }
 
     .deal {
