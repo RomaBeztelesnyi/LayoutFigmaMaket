@@ -47,9 +47,9 @@ label {
 }
 
 
-[type=checkbox]+label {
+[type=radio]+label {
     font-size: 10px;
-
+    text-transform: uppercase;
 }
 
 :checked + label {
@@ -105,6 +105,7 @@ button {
     row-gap: 16px;
     background-color: var(--light-primary);
     border-radius: 8px;
+    margin-bottom: 12px;
 
     &.completed {
         opacity: 0.5;

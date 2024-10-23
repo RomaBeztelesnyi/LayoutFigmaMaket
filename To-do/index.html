@@ -10,18 +10,54 @@
    
 <h1>Todo-list</h1> 
 <search>
-    <form action="">
+    <form>
         <input type="search">
         <div class="categories">
-            <input type="checkbox" name="categories" hidden id="home" /><label>Home</label>
-            <input type="checkbox" name="categories" hidden id="work" /><label>Work</label>
-            <input type="checkbox" name="categories" hidden id="fitness" /><label>fitness</label>
+            <input type="radio" name="categories" hidden id="home" /><label for="home">Home</label>
+            <input type="radio" name="categories" hidden id="work" /><label for="work">Work</label>
+            <input type="radio" name="categories" hidden id="fitness" /><label for="fitness">fitness</label>
         </div>
     </form>
 </search>
 
-<ul id="todo-items">
-    <li class="todo-item completed">
+<ul id="todo-list">
+</ul>
+<hr />
+<form id="edit-form">
+    <div class="form-control">
+        <label>Categories</label>
+        <div class="categories">
+            <input type="radio" name="categories" hidden id="home" /><label for="home">Home</label>
+            <input type="radio" name="categories" hidden id="work" /><label for="work">Work</label>
+            <input type="radio" name="categories" hidden id="fitness" /><label for="fitness">fitness</label>
+        </div>
+    </div>
+    <div class="form-control">
+        <label>Title</label>
+        <input name="title">
+    </div>
+    <div class="form-control">
+        <label>Describe</label>
+        <textarea rows="4" name="desc"></textarea>
+    </div>
+    <div class="form-actions">
+        <button class="secondary">
+            <svg width="20" height="20">
+                <use href="icon.svg#cancel"></use>
+            </svg>
+            Cancel
+        </button>
+        <button class="primary" type="submit">
+            <svg width="20" height="20">
+                <use href="icon.svg#submit"></use>
+            </svg>
+            Submit
+        </button>
+    </div>
+</form>
+
+<template id="todo-list-item-template">
+    <li class="todo-item">
         <div class="tags">
             <p class="tag">fitness</p>
         </div>
@@ -38,50 +74,17 @@
             </button>
         </div>
         <div class="content">
-            <h2>Title</h2>
-            <p>Description</p>
+            <h2 class="title">Title</h2>
+            <p class="desc">Description</p>
         </div>
         <button class="primary">
             <svg width="22" height="22">
                 <use href="icon.svg#check"></use>
             </svg>
-            Завершити
+            Submit
         </button>
     </li>
-</ul>
-<form id="edit-form">
-    <div class="form-control">
-        <label>Categories</label>
-        <input type="search">
-        <div class="categories">
-            <input type="checkbox" name="categories" hidden id="home" /><label>Home</label>
-            <input type="checkbox" name="categories" hidden id="work" /><label>Work</label>
-            <input type="checkbox" name="categories" hidden id="fitness" /><label>fitness</label>
-        </div>
-    </div>
-    <div class="form-control">
-        <label>Title</label>
-        <input name="title">
-    </div>
-    <div class="form-control">
-        <label>Describe</label>
-        <textarea rows="4" name="desc"></textarea>
-    </div>
-    <div class="form-actions">
-        <button class="secondary">
-            <svg width="22" height="22">
-                <use href="icon.svg#check"></use>
-            </svg>
-            скасувати
-        </button>
-        <button class="primary">
-            <svg width="22" height="22">
-                <use href="icon.svg#check"></use>
-            </svg>
-            Завершити
-        </button>
-    </div>
-</form>
-<script src="script.js"></script>
+</template>
+<script defer src="script.js"></script>
 </body>
 </html>

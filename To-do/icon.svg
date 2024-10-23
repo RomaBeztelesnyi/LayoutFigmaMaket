@@ -10,5 +10,16 @@
 <symbol id="delete">
  <path fill="currentColor" d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM14 1H10.5L9.5 0H4 .5L3.5 1H0V3H14V1Z"/>
 </symbol>
+
+<symbol id="submit">
+    <path fill="currentColor" d="M5.99997 11.17L1.82997 7.00003L0.409973 8.41003L5.99997 14L18 2.00003L16.59 0.590027L5.99997 11.17Z" />
+</symbol>
+
+<symbol id='cancel'>
+    <path fill='currentColor' d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" />
+</symbol>
+
 </svg>
+
+
 
