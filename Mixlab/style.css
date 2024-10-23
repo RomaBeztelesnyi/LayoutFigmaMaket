@@ -60,9 +60,6 @@ p {
 
 }
 
-.header__nav {
-}
-
 .header__list {
     display: flex;
     justify-content: space-between;
@@ -71,10 +68,6 @@ p {
 }
 .header__nav a {
     font-size: 14px;
-}
-
-
-.header__logo {
 }
 
 .header .login {
@@ -268,10 +261,6 @@ p {
     align-items: center;
 }
 
-.owner {
-
-}
-
 .support_main {
     margin-left: 50px;
 }
@@ -334,10 +323,6 @@ p {
     margin: 0 auto;
     content: url(./images/Heart.png);
     position: relative;
-}
-
-.login {
-
 }
 
 .feedback__text {
@@ -443,10 +428,6 @@ p {
 
 }
 
-.recomend_card {
-
-}
-
 .recomend_date {
     font-weight: 400;
     font-size: 15px;
@@ -454,9 +435,6 @@ p {
     color: #f7a500;
 }
 
-.card-one {
-
-}
 
 .recomend__img-div {
     width:100%;
@@ -480,9 +458,6 @@ p {
     font-size: 11px;
 }
 
-.card-two .card_info {
-    
-}
 
 .card_info { 
     margin-top: 30px;
@@ -577,17 +552,6 @@ p {
     flex-direction: column;
 }
 
-.new_york {
-
-}
-
-.los_angeles {
-    
-}
-
-.footer__socials {
-
-}
 
 .footer__socials-icons {
     display: flex;
@@ -595,8 +559,6 @@ p {
     flex-wrap: wrap;
 }
 
-.footer__socials-link {
-}
 
 @media(max-width:1176px) {
     .how__work  .container {
@@ -605,36 +567,5 @@ p {
 
     .feedback__text {
         width: auto;
-    }
-}
-
-@media(max-width:900px) {
-    .box__article::before {
-        display: none;
-    }
-    .box__article::after {
-        display: none;
-    }
-    .box__article {
-        max-width: auto;
-    }
-    .recomend_main {
-        width: auto;
-    }
-    
-    .card_info {
-        margin-top: auto;
-    }
-
-    .corp img {
-        max-width: 100px;
-    }
-
-    .text_sub {
-        font-size: 10px;
-    }
-    
-    .footer .container {
-        grid-template-columns: 120px 120px 120px 120px 120px
     }
 }

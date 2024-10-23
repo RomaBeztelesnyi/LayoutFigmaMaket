@@ -7,27 +7,82 @@
     <title>To do</title>
 </head>
 <body>
-    <h1>Hello</h1>
-    <h2>Hello</h2>
-    <input />
-    <textarea rows="4" name="" id=""></textarea>
-    <label>label</label>
+   
+<h1>Todo-list</h1> 
+<search>
+    <form action="">
+        <input type="search">
+        <div class="categories">
+            <input type="checkbox" name="categories" hidden id="home" /><label>Home</label>
+            <input type="checkbox" name="categories" hidden id="work" /><label>Work</label>
+            <input type="checkbox" name="categories" hidden id="fitness" /><label>fitness</label>
+        </div>
+    </form>
+</search>
 
-    <input type="checkbox" checked hidden><label>Active</label>
-    <p class="tag">tag</p>
+<ul id="todo-items">
+    <li class="todo-item completed">
+        <div class="tags">
+            <p class="tag">fitness</p>
+        </div>
+        <div class="actions">
+            <button class="icon-btn">
+                <svg width="22" height="22">
+                    <use href="icon.svg#edit"></use>
+                </svg>
+            </button>
+            <button class="icon-btn">
+                <svg width="22" height="22">
+                    <use href="icon.svg#delete"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="content">
+            <h2>Title</h2>
+            <p>Description</p>
+        </div>
+        <button class="primary">
+            <svg width="22" height="22">
+                <use href="icon.svg#check"></use>
+            </svg>
+            Завершити
+        </button>
+    </li>
+</ul>
+<form action="">
+    <div class="form-control">
+        <label>Categories</label>
+        <input type="search">
+        <div class="categories">
+            <input type="checkbox" name="categories" hidden id="home" /><label>Home</label>
+            <input type="checkbox" name="categories" hidden id="work" /><label>Work</label>
+            <input type="checkbox" name="categories" hidden id="fitness" /><label>fitness</label>
+        </div>
+    </div>
+    <div class="form-control">
+        <label>Title</label>
+        <input name="title">
+    </div>
+    <div class="form-control">
+        <label>Describe</label>
+        <textarea rows="4" name="desc"></textarea>
+    </div>
+    <div class="form-actions">
+        <button class="secondary">
+            <svg width="22" height="22">
+                <use href="icon.svg#check"></use>
+            </svg>
+            скасувати
+        </button>
+        <button class="primary">
+            <svg width="22" height="22">
+                <use href="icon.svg#check"></use>
+            </svg>
+            Завершити
+        </button>
+    </div>
+</form>
 
-    <button class="primary">
-        <svg width="22" height="22">
-            <use href="icon.svg#check"></use>
-        </svg>
-        Click me
-    </button>
-    
-    <button class="icon-btn">
-        <svg width="22" height="22">
-            <use href="icon.svg#check"></use>
-        </svg>
-    </button>
-<script src="script.js">tag</script>
+<script src="script.js"></script>
 </body>
 </html>
