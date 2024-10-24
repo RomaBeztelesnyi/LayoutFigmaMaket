@@ -11,7 +11,7 @@
 <h1>Todo-list</h1> 
 <search>
     <form>
-        <input type="search">
+        <input type="search"/>
         <div class="categories">
             <input type="radio" name="categories" hidden id="home" /><label for="home">Home</label>
             <input type="radio" name="categories" hidden id="work" /><label for="work">Work</label>
@@ -23,7 +23,7 @@
 <ul id="todo-list">
 </ul>
 <hr />
-<form id="edit-form">
+<form id="edit-form" data-mode="create" data-editId="">
     <div class="form-control">
         <label>Categories</label>
         <div class="categories">
@@ -62,12 +62,12 @@
             <p class="tag">fitness</p>
         </div>
         <div class="actions">
-            <button class="icon-btn">
+            <button class="icon-btn" data-action="edit">
                 <svg width="22" height="22">
                     <use href="icon.svg#edit"></use>
                 </svg>
             </button>
-            <button class="icon-btn">
+            <button class="icon-btn" data-action="delete">
                 <svg width="22" height="22">
                     <use href="icon.svg#delete"></use>
                 </svg>
@@ -77,7 +77,7 @@
             <h2 class="title">Title</h2>
             <p class="desc">Description</p>
         </div>
-        <button class="primary">
+        <button class="primary" data-action="complete">
             <svg width="22" height="22">
                 <use href="icon.svg#check"></use>
             </svg>
