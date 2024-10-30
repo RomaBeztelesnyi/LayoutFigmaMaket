@@ -5,7 +5,7 @@ let finish = false;
 let result = 0;
 
 const digit = ['0','1','2','3','4','5','6','7','8','9','.'];
-const action = ['+', '-', 'x', '÷', '%', '+/-'];
+const action = ['+', '-', 'x', '÷', '%', '+/-', '√', 'xⁿ'];
 
 const out = document.querySelector('.calc-screen p');
 
@@ -78,6 +78,17 @@ document.querySelector('.buttons').addEventListener('click', (event) => {
                 break;
             case '%':
                 x = (y/100) * x;
+                break;
+            case '√':
+                if( x === '0') {
+                    alert("Error");
+                    clearAll();
+                    return;
+                }
+                x = Math.sqrt(x);
+                break;
+            case 'xⁿ':
+                x = x ** y;
                 break;
         }
        
