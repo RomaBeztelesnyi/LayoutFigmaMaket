@@ -2,9 +2,10 @@ let x = '';
 let y = '';
 let symbol = '';
 let finish = false;
+let result = 0;
 
-const digit = ['0','1','2','3','4','5','6','7','8','9'];
-const action = ['+', '-', 'x', '÷'];
+const digit = ['0','1','2','3','4','5','6','7','8','9','.'];
+const action = ['+', '-', 'x', '÷','%'];
 
 const out = document.querySelector('.calc-screen p');
 
@@ -15,7 +16,6 @@ function clearAll() {
     finish = '';
     out.textContent = 0;
 }
-
 document.querySelector('.ac').onclick = clearAll;
 
 document.querySelector('.buttons').addEventListener('click', (event) => {
@@ -37,17 +37,13 @@ document.querySelector('.buttons').addEventListener('click', (event) => {
             y += key;
             out.textContent = y;
         }
-        console.log(x, symbol, y)
         return;
-        
     }
-
     if (action.includes(key)) { 
         symbol = key;
         out.textContent = symbol;
         return;
     }
-
     if (key === '=') {
         if(y === '') y = x;
         switch (symbol) {
@@ -68,8 +64,11 @@ document.querySelector('.buttons').addEventListener('click', (event) => {
                 }
                 x = x / y;
                 break;
+            case '%':
+                x = (y/100) * x;
+                break;
         }
-        console.log(x, symbol, y)
+        
         finish = true;
         out.textContent = x;
     }

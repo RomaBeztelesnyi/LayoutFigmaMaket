@@ -65,8 +65,8 @@
 }
 .zero {
     width: 127px;
-    
 }
+
 .bg-gray {
     background: var( --primary-func);
     color: #000;
