@@ -5,7 +5,7 @@ let finish = false;
 let result = 0;
 
 const digit = ['0','1','2','3','4','5','6','7','8','9','.'];
-const action = ['+', '-', 'x', '÷','%'];
+const action = ['+', '-', 'x', '÷', '%', '+/-'];
 
 const out = document.querySelector('.calc-screen p');
 
@@ -39,6 +39,18 @@ document.querySelector('.buttons').addEventListener('click', (event) => {
         }
         return;
     }
+
+    if (key === '+/-') {
+        if (y === '' && symbol === '') {
+            x = x ? (-x).toString() : '';
+            out.textContent = x;
+        } else if (symbol !== '' && !finish) {
+            y = y ? (-y).toString() : '';
+            out.textContent = y;
+        }
+        return;
+    }
+
     if (action.includes(key)) { 
         symbol = key;
         out.textContent = symbol;
@@ -68,8 +80,10 @@ document.querySelector('.buttons').addEventListener('click', (event) => {
                 x = (y/100) * x;
                 break;
         }
+       
         
         finish = true;
         out.textContent = x;
     }
 });
+
