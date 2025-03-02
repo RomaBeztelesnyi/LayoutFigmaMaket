@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style/style.css">
+  <title>Rock, Paper, Scissors</title>
+</head>
+<body>
+<container class="main flex">
+  <section class="logo_title flex">
+    <img src="./images/logo.svg" alt="logo">
+    <div class="score flex">
+      score
+      <p class="total"></p>
+    </div>
+  </section>
+  <section class="game_items flex" id="chose">
+    <button class="paper">
+      <img src="./images/icon-paper.svg" alt="paper">
+    </button>
+    <button class="scissors">
+      <img src="./images/icon-scissors.svg" alt="scissors" >
+    </button>
+    <button class="rock">
+      <img src="./images/icon-rock.svg" alt="rock">
+    </button>
+  </section>
+
+  <section class="game flex" id="result">
+    <div class="userChoice">
+      <p class="choice">Your Choice</p>
+      <button>
+          <img src="" id="userImage">
+      </button>
+    </div>
+    <div class="result_game flex">
+      <p class="result_text"></p>
+      <button class="play-again flex">
+      play again
+      </button>
+    </div>
+    <div class="computerChoice">
+      <p class="choice">Computer Choice</p>
+      <button>
+          <img src="" id ="computerImage" >
+      </button>
+    </div>
+  </section>
+
+  <div class="rules"></div>
+</container>
+<script type="module" src="./script/app.js"></script>
+</body>
+</html>

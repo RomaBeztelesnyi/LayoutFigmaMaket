@@ -90,6 +90,8 @@ document.querySelector('.buttons').addEventListener('click', (event) => {
             case 'xⁿ':
                 x = x ** y;
                 break;
+            default: 
+                break;
         }
        
         

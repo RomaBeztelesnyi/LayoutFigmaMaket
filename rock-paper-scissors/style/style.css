@@ -1,0 +1,194 @@
+body p {
+    margin: 0 auto;
+    padding: 0;  
+}
+.main {
+    width: 1366px;
+    height: 768px;
+    min-height: auto;
+    background: radial-gradient(circle, #1f3756 0%, #141539 100%);
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.flex {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 64px;
+}
+.logo_title {
+    justify-content: space-between;
+    margin-top: 48px;
+    padding: 0 30px;
+    width: 700px;
+    min-height: 150px;
+    border: 1px solid #FFFFFF;
+    border-radius:15px;
+    flex-direction: row;
+}
+.score {
+    justify-content: center;
+    gap: 0px;
+    width: 150px;
+    height: 114px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #2A45C2;
+    letter-spacing: 3px;
+    & .total{
+        font-size: 56px;
+        margin: 0;
+        color: #565468;
+    }
+}
+.game_items {
+    flex-direction: row;
+    width: 473px;
+    height: 430px;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: url(../images/bg-triangle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    & button {
+        width: 190px;
+        height: 190px;
+        border-radius: 50%;
+        cursor: pointer;
+        background: radial-gradient(circle at 50% 50%, #ffffff, #e0e0e0);
+        transition: all 0.3s ease;
+    }
+    & .paper {
+        border: 20px solid #4664F4;
+        box-shadow:
+        0 10px 5px 3px rgba(0, 0, 0, 0.3),
+        0 8px 0 rgb(42, 69, 194),
+        inset 0 6px  rgb(186, 191, 212),
+        inset 0 -4px 8px rgba(0, 0, 0, 0.2);  
+   
+    }
+    & .scissors {
+        border: 20px solid #EB9F0E;
+        box-shadow:
+        0 10px 5px 3px rgba(0, 0, 0, 0.3),
+        0 8px 0 rgb(199, 108, 27),
+        inset 0 6px  rgb(186, 191, 212),
+        inset 0 -4px 8px rgba(0, 0, 0, 0.2);
+    }
+    & .rock {
+        border: 20px solid #DB2E4D;
+        box-shadow:
+        0 10px 5px 3px rgba(0, 0, 0, 0.3),
+        0 8px 0 rgb(157, 22, 52),
+        inset 0 6px  rgb(186, 191, 212),
+        inset 0 -4px 8px rgba(0, 0, 0, 0.2);
+    }
+    & .paper:hover {
+        box-shadow: 
+        0 8px 12px rgba(0, 0, 0, 0.5), /* Більша зовнішня тінь */
+        0 0 15px 15px rgba(42, 69, 194, 0.7); /* Світіння синього кольору */
+        transform: translateY(5px)
+    }
+    & .scissors:hover {
+        box-shadow: 
+        0 8px 12px rgba(0, 0, 0, 0.5), /* Більша зовнішня тінь */
+        0 0 15px 15px rgb(199, 108, 27, 0.7); /* Світіння синього кольору */
+        transform: translateY(5px)
+    }
+    & .rock:hover {
+        box-shadow: 
+        0 8px 12px rgba(0, 0, 0, 0.5), /* Більша зовнішня тінь */
+        0 0 15px 15px rgb(157, 22, 52, 0.7); /* Світіння синього кольору */
+        transform: translateY(5px)
+    }
+}
+.rules {
+}
+
+.game {
+    display: none;
+    flex-direction: row;
+    max-width: 950px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    & button {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        cursor: pointer;
+        background: radial-gradient(circle at 50% 50%, #ffffff, #e0e0e0);
+        transition: all 0.3s ease;
+    }
+    & > button.play-again {
+        display: none;
+        width: 200px;
+        height: 50px;
+        background-color: white;
+        font-weight: 500;
+        font-size: 16px;
+        text-transform: uppercase;
+        border-radius: 5px;
+        justify-content: center;
+    }
+    & .paper {
+        border: 40px solid #4664F4;
+        box-shadow:
+        0 10px 5px 3px rgba(0, 0, 0, 0.3),
+        0 8px 0 rgb(42, 69, 194),
+        inset 0 6px  rgb(186, 191, 212),
+        inset 0 -4px 8px rgba(0, 0, 0, 0.2);  
+   
+    }
+    & .scissors {
+        border: 40px solid #EB9F0E;
+        box-shadow:
+        0 10px 5px 3px rgba(0, 0, 0, 0.3),
+        0 8px 0 rgb(199, 108, 27),
+        inset 0 6px  rgb(186, 191, 212),
+        inset 0 -4px 8px rgba(0, 0, 0, 0.2);
+    }
+    & .rock {
+        border: 40px solid #DB2E4D;
+        box-shadow:
+        0 10px 5px 3px rgba(0, 0, 0, 0.3),
+        0 8px 0 rgb(157, 22, 52),
+        inset 0 6px  rgb(186, 191, 212),
+        inset 0 -4px 8px rgba(0, 0, 0, 0.2);
+    }
+    & .choice {
+        text-align: center;
+        color: #ffffff;
+        margin-bottom: 50px;
+        font-size: 36px;
+    }
+}
+
+.result_game {
+    justify-content: center;
+    width: 200px;
+    height: 25px;
+    color: #FFF;
+    & .result_text {
+        font-weight: bold;
+        width: 252px;
+        font-size: 46px;
+        color: #FFF;
+        text-align: start;
+        text-transform: uppercase;
+        
+    }
+    & .play-again {
+        align-items: center;
+        width: 165px;
+        height: 40px;
+        background-color: white;
+        font-weight: 500;
+        font-size: 16px;
+        text-transform: uppercase;
+        border-radius: 5px;
+    }
+}
+
