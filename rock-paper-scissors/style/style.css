@@ -173,9 +173,10 @@ body p {
     color: #FFF;
     & .result_text {
         font-weight: bold;
-        width: 252px;
-        font-size: 46px;
+        width: 200px;
+        font-size: 36px;
         color: #FFF;
+        justify-content: center;
         text-align: start;
         text-transform: uppercase;
         
