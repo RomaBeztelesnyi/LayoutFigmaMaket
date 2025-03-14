@@ -9,12 +9,12 @@
   <title>Rock, Paper, Scissors</title>
 </head>
 <body>
-<container class="main flex">
+<main class="container flex">
   <section class="logo_title flex">
     <img src="./images/logo.svg" alt="logo">
     <div class="score flex">
       score
-      <p class="total"></p>
+      <p class="total">0</p>
     </div>
   </section>
   <section class="game_items flex" id="chose">
@@ -50,8 +50,21 @@
     </div>
   </section>
 
-  <div class="rules"></div>
-</container>
+  <section class="rules">
+    <button id="rule">rules</button>
+    <div class="rule_wrapper flex">
+      <div class="rule_icon flex">
+        <p class="rule_text">rules</p>
+        <button class="close" id="closeImg">
+          <img src="./images/icon-close.svg" alt="close">
+        </button>
+        <!-- <img src="./images/icon-close.svg" alt="close" class="close_img"> -->
+      </div>
+      
+      <img src="./images/image-rules.svg" alt="rules" class="rules_svg">
+    </div>
+  </section>
+</main>
 <script type="module" src="./script/app.js"></script>
 </body>
 </html>

@@ -1,9 +1,15 @@
 const playAgain = document.querySelector('button.play-again')
 
 const imageMaping = {
-    'paper': './images/icon-paper.svg',
-    'scissors': './images/icon-scissors.svg',
-    'rock': './images/icon-rock.svg'
+    paper: './images/icon-paper.svg',
+    scissors: './images/icon-scissors.svg',
+    rock: './images/icon-rock.svg'
+}
+
+const gameStates = {
+    tie: 'tie',
+    win: 'you win!',
+    lose: 'you lose!'
 }
 
 const parentItem = document.querySelectorAll('.game_items button');
@@ -16,14 +22,14 @@ parentItem.forEach(button => {
         
         const computerChoice = Math.floor(Math.random() * 3);
         
-        choseen(imageMaping[userChoice],imageMaping[Object.keys(imageMaping)[computerChoice]],userChoice,Object.keys(imageMaping)[computerChoice]
+        chosen(imageMaping[userChoice],imageMaping[Object.keys(imageMaping)[computerChoice]],userChoice,Object.keys(imageMaping)[computerChoice]
         );
 
         event.preventDefault();
     })
 } )
 
-const choseen = (userImage,computerImage, userClass, computerClass) => {
+const chosen = (userImage,computerImage, userClass, computerClass) => {
     const chose = document.getElementById('chose');
     const result = document.getElementById('result');
 
@@ -33,8 +39,6 @@ const choseen = (userImage,computerImage, userClass, computerClass) => {
     const userResultImage = document.getElementById('userImage');
     const computerResultImage = document.getElementById('computerImage');
 
-    const resultText = document.querySelector('.result_text')
-    
     userResultImage.src = userImage;
     computerResultImage.src = computerImage;
 
@@ -52,9 +56,14 @@ const choseen = (userImage,computerImage, userClass, computerClass) => {
         styleUserChoise.classList.remove(userClass);
         styleComputerChoise.classList.remove(computerClass);
     })
+    resultGame(userClass, computerClass);
+}
 
+
+const resultGame = (userClass, computerClass) => {
     let winner = ''
-
+    const resultText = document.querySelector('.result_text')
+    
     switch (true) {
         case userClass === computerClass:
             winner = "tie";
@@ -72,16 +81,16 @@ const choseen = (userImage,computerImage, userClass, computerClass) => {
     }
     
     if(winner === "tie") {
-        resultText.textContent = "tie"
+        resultText.textContent = gameStates.tie
     } else if(winner === "you") {
-        resultText.textContent = "you win!"
+        resultText.textContent = gameStates.win
     } else {
-        resultText.textContent = "you lose!"
+        resultText.textContent = gameStates.lose
     }
 
     const countScore = document.querySelector('.total');
 
-    let count = parseInt(countScore.textContent) || 0;
+    let count = parseInt(countScore.textContent);
 
     
     if (winner === "you") {
@@ -98,5 +107,18 @@ const choseen = (userImage,computerImage, userClass, computerClass) => {
     }
 }
 
+const ruleButton = document.getElementById('rule');
+const ruleImage = document.querySelector('.rule_wrapper')
+const closeRule = document.getElementById('closeImg')
 
+ruleButton.addEventListener('click', () => {
+        ruleImage.style.display = 'flex'
+        document.body.style.background = 'rgb(14, 15, 39) 100%'
+});
+console.dir(document.body.style.background);
+
+closeRule.addEventListener('click', () => {
+    ruleImage.style.display = 'none'
+    document.body.style.background = 'radial-gradient(circle, #1f3756 0%, #141539 100%)'
+})
 
