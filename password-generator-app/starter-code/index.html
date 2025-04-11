@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style/style.css">
+  <title>Password generator app</title>
+</head>
+<body>
+  <main>
+    <section class="container flex">
+      <h1 class="title">Password Generator</h1>
+
+      <section class="output_generator flex">
+        <div class="password">12345678912345678901</div>
+        <button class="cope-btn"><span></span><img src="./assets/images/icon-copy.svg" class="cope-btn" alt="copy"></button>
+      </section>
+      
+      <section class="mechanic_generator flex">
+        <div class="character flex">
+          <label for="character_length" class="length">Character Length</label>
+          <span class="value_range"></span>
+          <input type="range" name="character_length" id="character_length" min="0" max="20" step="1">
+        </div>
+
+        <section class="check_character flex">
+          <label for="include_uppercase" class="pointer"><input type="checkbox" name="include_uppercase" id="include_uppercase" class="real-checkbox"><span class="custom-checkbox"></span>Include Uppercase Letters</label>
+          <label for="include_lowercase" class="pointer"><input type="checkbox" name="include_lowercase" id="include_lowercase" class="real-checkbox"><span class="custom-checkbox"></span>Include Lowercase Letters</label>
+          <label for="include_numbers" class="pointer"><input type="checkbox" name="include_numbers" id="include_numbers" class="real-checkbox"><span class="custom-checkbox"></span>Include Numbers</label>
+          <label for="include_symbol" class="pointer"><input type="checkbox" name="include_symbol" id="include_symbol" class="real-checkbox"><span class="custom-checkbox"></span>Include Symbols</label>
+        </section>
+
+        <section class="strenght flex">
+          <h2>strenght</h2>
+          <div class="strength-info flex">
+            <span class="strength-label">TOO WEAK!</span>
+            <div class="bars">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </section>
+
+        <button class="btn_generate_password">generate <img src="./assets/images/icon-arrow-right.svg" alt=""> 
+        </button>
+      </section>
+    </section>
+  </main>
+<script src="./script/script.js"></script>
+</body>
+</html>

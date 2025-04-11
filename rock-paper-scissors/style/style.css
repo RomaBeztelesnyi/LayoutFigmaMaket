@@ -1,32 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&display=swap');
 body {
-    margin: 0 auto;
-    padding: 0;  
-    box-sizing: border-box;
     background: radial-gradient(circle, #1f3756 0%, #141539 100%);
     background-repeat:no-repeat;
     background-size:cover;
     font-family: "Barlow", sans-serif;
 }
+/* * {
+    outline: 1px solid red;
+} */
 .container {
+    margin: 0 auto;
+    padding: 0;  
+    box-sizing: border-box;
     max-width: 1366px;
+    height: 100%;
+    position: relative;
 }
 .flex {
     display: flex;
     justify-content: start;
     align-items: center;
     flex-direction: column;
-    gap: 50px;
+    gap: 40px;
 }
 .logo_title {
-    justify-content: space-between;
+    justify-content: space-around;
+    column-gap: 30%;
     margin-top: 35px;
-    padding: 0 30px;
-    width: 700px;
+    max-width: 700px;
+    width: 100%;
     min-height: 150px;
     border: 1px solid #FFFFFF;
     border-radius:15px;
     flex-direction: row;
+    
 }
 .score {
     justify-content: center;
@@ -238,8 +245,9 @@ body {
         row-gap: 15px;
         position: absolute;
         
-        top: 173px;
-        left: 500px;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
 
         background-color: #ffffff;
         width: 305px;
