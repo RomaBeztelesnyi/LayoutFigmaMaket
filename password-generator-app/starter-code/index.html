@@ -14,8 +14,8 @@
       <h1 class="title">Password Generator</h1>
 
       <section class="output_generator flex">
-        <div class="password">12345678912345678901</div>
-        <button class="cope-btn"><span></span><img src="./assets/images/icon-copy.svg" class="cope-btn" alt="copy"></button>
+        <div class="password"></div>
+        <button class="cope-btn flex"><span class="copied"></span><img src="./assets/images/icon-copy.svg" class="cope-btn" alt="copy"></button>
       </section>
       
       <section class="mechanic_generator flex">
@@ -35,17 +35,15 @@
         <section class="strenght flex">
           <h2>strenght</h2>
           <div class="strength-info flex">
-            <span class="strength-label">TOO WEAK!</span>
+            <span class="strength_label"></span>
             <div class="bars">
-              <div class="bar"></div>
-              <div class="bar"></div>
-              <div class="bar"></div>
-              <div class="bar"></div>
+              <div class="bar" id="first"></div>
+              <div class="bar" id="second"></div>
+              <div class="bar" id="third"></div>
+              <div class="bar" id="forth"></div>
             </div>
           </div>
         </section>
-        <div class="">PIPISka
-        </div>
         <button class="btn_generate_password">generate <img src="./assets/images/icon-arrow-right.svg" alt=""> 
         </button>
       </section>
