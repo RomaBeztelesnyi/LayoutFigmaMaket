@@ -8,16 +8,7 @@ const includeSymbol = document.getElementById("include_symbol");
 const generateBtn = document.querySelector(".btn_generate_password");
 const output = document.querySelector(".output_generator .password");
 
-
-
-// const firstBarStrength = document.getElementById('first');
-// const secondBarStrength = document.getElementById('second');
-// const thirdBarStrength = document.getElementById('third');
-// const forthBarStrength = document.getElementById('forth');
-
 const bars = document.querySelectorAll('.bar');
-
-console.log(bars);
 
 const strengthText = document.querySelector('.strength_label');
 
@@ -25,34 +16,36 @@ rangeValue.oninput = () => {
     value.textContent = rangeValue.value;
 }
 
-const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const lowercase = "abcdefghijklmnopqrstuvwxyz";
-const numbers = "0123456789";
-const symbols = "!@#$%^&*()_+{}[]<>?/|";
+const CONFIG = {
+    CHARS: {
+        UPPERCASE: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        LOWERCASE: "abcdefghijklmnopqrstuvwxyz",
+        NUMBERS: "0123456789",
+        SYMBOLS: "!@#$%^&*()_+{}[]<>?/|"
+    },
+    STRENGTH: {
+        TOO_WEAK: { text: 'too weak!', class: 'low'},
+        WEAK: { text: 'weak', class: 'weak'},
+        MEDIUM: { text: 'medium', class: 'medium'},
+        STRONG: { text: 'strong', class: 'strong'}
+    },
+    COPY_TIMEOUT: 5000
+};
 
 const generatePassword = (length, useUpperCase, useLowwerCase, useNumber, useSymbols) => {
-    let chars = ''; 
-    console.log(chars);
-    
-    if (useUpperCase) chars += uppercase;
-    if (useLowwerCase) chars += lowercase;
-    if (useNumber) chars += numbers;
-    if (useSymbols) chars += symbols;
+    let chars = '';
+    if (useUpperCase) chars += CONFIG.CHARS.UPPERCASE;
+    if (useLowwerCase) chars += CONFIG.CHARS.LOWERCASE;
+    if (useNumber) chars += CONFIG.CHARS.NUMBERS;
+    if (useSymbols) chars += CONFIG.CHARS.SYMBOLS;
     if (chars.length === 0) return; 
 
     let password = '';
-
     for (let i = 0; i < length; i++) {
         const randomIndex = Math.floor(Math.random() * chars.length);
-        console.log(randomIndex);
-        
         password += chars[randomIndex];
-        console.log(password);
-        
     }
-
     return password;
-
 }
 
 generateBtn.addEventListener('click', ()=> {
@@ -68,72 +61,40 @@ generateBtn.addEventListener('click', ()=> {
 
     let countCheckbox = 0;
     
-    if (includeUpper.checked)  countCheckbox += 1;
-    if (includeLower.checked)  countCheckbox += 1;
-    if (includeNumbers.checked)  countCheckbox += 1;
-    if (includeSymbol.checked)  countCheckbox += 1;
+    if (includeLower.checked)  countCheckbox ++;
+    if (includeUpper.checked)  countCheckbox ++;
+    if (includeNumbers.checked)  countCheckbox ++;
+    if (includeSymbol.checked)  countCheckbox ++;
     console.log(countCheckbox);
 
-    bars.forEach(bar => {
-        bar.className = 'bar'
-    })
+    bars.forEach(bar => bar.className = 'bar')
 
     switch (countCheckbox) {
         case 1:
-            strengthText.textContent = 'too weak!'
-            bars[0].classList.add('low')
+            strengthText.textContent = CONFIG.STRENGTH.TOO_WEAK.text
+            bars[0].classList.add(CONFIG.STRENGTH.TOO_WEAK.class)
             break;
         case 2:
-            strengthText.textContent = 'weak'
-            bars[0].classList.add('weak')
-            bars[1].classList.add('weak')
+            strengthText.textContent = CONFIG.STRENGTH.WEAK.text
+            bars[0].classList.add(CONFIG.STRENGTH.WEAK.class)
+            bars[1].classList.add(CONFIG.STRENGTH.WEAK.class)
+            
             break;
         case 3:
-            strengthText.textContent = 'medium'
-            bars[0].classList.add('medium')
-            bars[1].classList.add('medium')
-            bars[2].classList.add('medium')
+            strengthText.textContent = CONFIG.STRENGTH.MEDIUM.text
+            bars[0].classList.add(CONFIG.STRENGTH.MEDIUM.class)
+            bars[1].classList.add(CONFIG.STRENGTH.MEDIUM.class)
+            bars[2].classList.add(CONFIG.STRENGTH.MEDIUM.class)
             break;
         case 4:
-            strengthText.textContent = 'strong'
-            bars[0].classList.add('strong')
-            bars[1].classList.add('strong')
-            bars[2].classList.add('strong')
-            bars[3].classList.add('strong')
+            strengthText.textContent = CONFIG.STRENGTH.STRONG.text
+            bars.forEach(bar =>  bar.classList.add(CONFIG.STRENGTH.STRONG.class))
             break;
 
         default:
             strengthText.textContent = ''
             break;
     }
-    // switch (countCheckbox) {
-    //     case 1:
-    //         strengthText.textContent = 'too weak!'
-    //         firstBarStrength.classList.add('low')
-    //         break;
-    //     case 2:
-    //         strengthText.textContent = 'weak'
-    //         firstBarStrength.classList.add('weak')
-    //         secondBarStrength.classList.add('weak')
-    //         break;
-    //     case 3:
-    //         strengthText.textContent = 'medium'
-    //         firstBarStrength.classList.add('medium')
-    //         secondBarStrength.classList.add('medium')
-    //         thirdBarStrength.classList.add('medium')
-    //         break;
-    //     case 4:
-    //         strengthText.textContent = 'strong'
-    //         firstBarStrength.classList.add('strong')
-    //         secondBarStrength.classList.add('strong')
-    //         thirdBarStrength.classList.add('strong')
-    //         forthBarStrength.classList.add('strong')
-    //         break;
-
-    //     default:
-    //         strengthText.textContent = ''
-    //         break;
-    // }
 })
 
 const copiedBtn = document.querySelector('.cope-btn');
@@ -145,6 +106,6 @@ copiedBtn.addEventListener('click', () => {
         passwordCopy.textContent = 'copied';
     setTimeout(() => {
         passwordCopy.textContent = ''
-    },5000)
+    },CONFIG.COPY_TIMEOUT)
     })
 })
