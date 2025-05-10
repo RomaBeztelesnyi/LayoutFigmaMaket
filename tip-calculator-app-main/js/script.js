@@ -10,6 +10,7 @@ function clearActiveTips() {
 }
 tips.forEach((tip) => {
     tip.addEventListener('click', (e) => {
+        e.preventDefault()
         tip.classList.add('active');
         selectPercent = parseFloat(tip.textContent)
         calculateAmount(selectPercent)
@@ -45,13 +46,13 @@ const calculateAmount = (select) => {
         total.textContent = `$0.00`;
     }
 }
-const resetApp = document.querySelector('.reset_btn');
-resetApp.addEventListener('click', ()=> {
-    clearActiveTips()
-    bill.value = '';
-    numberOFPeople.value = '';
-    customTip.value = '';
-    selectPercent = 0;
-    tipAmount.textContent = `$0.00`
-    total.textContent = `$0.00`
-})
+// const resetApp = document.querySelector('.reset_btn');
+// resetApp.addEventListener('click', ()=> {
+//     clearActiveTips()
+//     bill.value = '';
+//     numberOFPeople.value = '';
+//     customTip.value = '';
+//     selectPercent = 0;
+//     tipAmount.textContent = `$0.00`
+//     total.textContent = `$0.00`
+// })

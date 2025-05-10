@@ -60,9 +60,7 @@ body {
     text-align: center;
     cursor: pointer;
   }
-  & img:hover {
-    
-  }
+ 
   & .copied {
     font-size: 14px;
     text-transform: uppercase;
