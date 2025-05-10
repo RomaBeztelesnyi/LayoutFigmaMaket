@@ -181,7 +181,8 @@ input[type="number"].error {
 
 .reset_btn {
     margin: auto;
-    width: 333px;
+    width: 100%;
+    max-width: 333px;
     height: 50px;
     background-color: #26C2AE;
     border: none;
@@ -189,7 +190,8 @@ input[type="number"].error {
     color: #00474b;
     font-size: 20px;
     font-weight: bold;
-
+    cursor:pointer;
+    
 }
 @media (max-width: 850px) {
     .wrapper {
@@ -197,7 +199,21 @@ input[type="number"].error {
         height: auto;
         align-items: center;
     }
-   
+    .input_data {
+       
+    }
+}
+
+@media (max-width: 480px) {
+    .tips {
+        justify-content: space-around;
+    }
+    .tip {
+        width: 148px;
+    }
+    .tips_input {
+        width: 148px;
+    }
 }
     
 
