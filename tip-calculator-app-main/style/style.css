@@ -11,7 +11,7 @@ body {
     display: flex;
     justify-content: center; 
     align-items: center; 
-    height: 100vh;
+    min-height: 100vh;
     margin: 0; 
     font-family: 'Space Mono', monospace;
 }
@@ -194,6 +194,10 @@ input[type="number"].error {
     
 }
 @media (max-width: 850px) {
+    body {
+        align-items: none;
+        min-height: none;
+    }
     .wrapper {
         flex-direction: column;
         height: auto;

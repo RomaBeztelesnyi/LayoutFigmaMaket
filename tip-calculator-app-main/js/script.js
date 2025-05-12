@@ -16,11 +16,13 @@ tips.forEach((tip) => {
         calculateAmount(selectPercent)
     })
 })
+
+bill.addEventListener('blur', () => {
+    calculateAmount(selectPercent);
+})
 customTip.addEventListener('blur', () => {
     clearActiveTips();
-
     const customValue = Number(customTip.value);
-
     if (!isNaN(customValue) && customValue >= 0) {
         selectPercent = customValue;
         calculateAmount(selectPercent);
@@ -46,13 +48,3 @@ const calculateAmount = (select) => {
         total.textContent = `$0.00`;
     }
 }
-// const resetApp = document.querySelector('.reset_btn');
-// resetApp.addEventListener('click', ()=> {
-//     clearActiveTips()
-//     bill.value = '';
-//     numberOFPeople.value = '';
-//     customTip.value = '';
-//     selectPercent = 0;
-//     tipAmount.textContent = `$0.00`
-//     total.textContent = `$0.00`
-// })
