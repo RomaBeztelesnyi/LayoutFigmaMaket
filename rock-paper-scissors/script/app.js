@@ -115,7 +115,7 @@ ruleButton.addEventListener('click', () => {
         ruleImage.style.display = 'flex'
         document.body.style.background = 'rgb(14, 15, 39) 100%'
 });
-console.dir(document.body.style.background);
+
 
 closeRule.addEventListener('click', () => {
     ruleImage.style.display = 'none'

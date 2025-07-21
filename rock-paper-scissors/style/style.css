@@ -118,7 +118,6 @@ body {
         transform: translateY(5px)
     }
 }
-
 .game {
     display: none;
     flex-direction: row;
@@ -182,7 +181,6 @@ body {
         font-size: 36px;
     }
 }
-
 .result_game {
     justify-content: center;
     width: 200px;
