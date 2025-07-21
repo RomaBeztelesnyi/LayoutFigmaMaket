@@ -3,7 +3,6 @@ import { generatePassword } from "./generate.js";
 import { changeProgress } from "./checkProgress.js";
 const rangeValue = document.getElementById("character_length");
 const value = document.querySelector('.value_range');
-
 const includeUpper = document.getElementById("include_uppercase");
 const includeLower = document.getElementById("include_lowercase");
 const includeNumbers = document.getElementById("include_numbers");
@@ -43,10 +42,8 @@ generateBtn.addEventListener('click', ()=> {
     changeProgress(countCheckbox, strengthText )
 
 })
-
 const copiedBtn = document.querySelector('.cope-btn');
 const passwordCopy = document.querySelector('.copied')
-
 copiedBtn.addEventListener('click', () => {
     const text = output.textContent;
     navigator.clipboard.writeText(text).then(() => {
@@ -56,3 +53,4 @@ copiedBtn.addEventListener('click', () => {
     },CONFIG.COPY_TIMEOUT)
     })
 })
+
