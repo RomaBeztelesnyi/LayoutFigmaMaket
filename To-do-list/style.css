@@ -1,6 +1,4 @@
-*,
-*::before,
-*::after {
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -15,8 +13,8 @@ li {
 }
 
 .todo_list_container {
-  max-width: 100%;
-  width: 800px;
+  max-width: 800px;
+  width: 100%;
   padding: 15px;
   background-color: blue;
   border-radius: 70px;
@@ -35,6 +33,7 @@ li {
   font-size: 36px;
 }
 .input-text {
+  font-size: 16px;
   width: 750px;
   max-width: 100%;
   padding: 10px;
@@ -50,17 +49,18 @@ li {
   flex-direction: column;
   gap: 10px;
   align-items: center;
-  max-width: 100%;
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   list-style-type: none;
   margin: auto;
+  padding-inline: 10px;
 }
 .list_item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 100%;
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   padding: 8px 12px;
   background-color: blue;
   color: white;
@@ -75,18 +75,24 @@ li {
   opacity: 0.5;
 }
 
-.btn-group {
+.btn_group {
   display: flex;
-  gap: 10px;
+  gap: 5px;
 }
 
-.btn-done {
+.btn_done {
   width: 35px;
   background-color: green;
   color: white;
 }
 
-.btn-remove {
+.btn_edit {
+  width: 35px;
+  background-color: orange;
+  color: white;
+}
+
+.btn_remove {
   width: 35px;
   background-color: red;
   color: white;
