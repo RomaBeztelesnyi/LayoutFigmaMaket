@@ -8,6 +8,8 @@ let countList = 0 || localStorage.length; // щоб не перезаписув�
 const savedTasks = Object.entries(localStorage);
 console.log(savedTasks);
 
+console.log(localStorage);
+
 function loadLocalStarage() {
   if (savedTasks.length === 0) return;
   for (let i = 0; i < savedTasks.length; i++) {
@@ -21,7 +23,7 @@ button.addEventListener("click", createElement);
 function createElement(id, task) {
   if (itemBeingEdited) {
     itemBeingEdited.firstChild.textContent = inputText.value;
-    localStorage.setItem(itemBeingEdited.getAttribute("id"), inputText.value); // ще й оновимо збережене
+    localStorage.setItem(itemBeingEdited.getAttribute("id"), inputText.value);
     itemBeingEdited = null;
     button.textContent = "Add Task";
     inputText.value = "";
