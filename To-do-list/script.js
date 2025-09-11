@@ -3,32 +3,53 @@ const list = document.querySelector(".todo_list_item");
 const inputText = document.querySelector(".input-text");
 
 let itemBeingEdited = null;
-let countList = 0;
+let countList = 0 || localStorage.length; // щоб не перезаписувати id задач
 
-button.addEventListener("click", () => {
+const savedTasks = Object.entries(localStorage);
+console.log(savedTasks);
+
+function loadLocalStarage() {
+  if (savedTasks.length === 0) return;
+  for (let i = 0; i < savedTasks.length; i++) {
+    const [id, task] = savedTasks[i];
+    createElement(id, task);
+  }
+}
+
+button.addEventListener("click", createElement);
+
+function createElement(id, task) {
   if (itemBeingEdited) {
-    // режим редагування
     itemBeingEdited.firstChild.textContent = inputText.value;
+    localStorage.setItem(itemBeingEdited.getAttribute("id"), inputText.value); // ще й оновимо збережене
     itemBeingEdited = null;
-    button.textContent = "Add Task"; // повертаємо напис кнопки
+    button.textContent = "Add Task";
     inputText.value = "";
     return;
   }
-  // Create Element
+
   const listItem = document.createElement("li");
   const groupBtn = document.createElement("div");
   const doneButton = document.createElement("button");
   const editButton = document.createElement("button");
   const removeBtn = document.createElement("button");
-  if (!inputText.value || inputText.value.trim() === "") {
-    alert("Prease enter task");
-    return;
+
+  if (id && task) {
+    listItem.setAttribute("id", id);
+    listItem.innerText = task;
   } else {
+    if (!inputText.value || inputText.value.trim() === "") {
+      alert("Please enter task");
+      return;
+    }
+    listItem.setAttribute("id", `task-${countList++}`);
     listItem.innerText = inputText.value;
+    localStorage.setItem(listItem.getAttribute("id"), inputText.value);
   }
+
   // Add classes
   listItem.classList.add("list_item");
-  listItem.setAttribute("id", `item-${countList++}`);
+
   removeBtn.classList.add("btn_remove");
   editButton.classList.add("btn_edit");
   doneButton.classList.add("btn_done");
@@ -44,8 +65,10 @@ button.addEventListener("click", () => {
 
   inputText.value = "";
 
-  removeBtn.addEventListener("click", () => {
-    listItem.remove(list);
+  removeBtn.addEventListener("click", (e) => {
+    const list = e.target.parentNode.parentNode;
+    list.remove();
+    localStorage.removeItem(list.getAttribute("id"));
   });
 
   editButton.addEventListener("click", editListItem);
@@ -53,7 +76,7 @@ button.addEventListener("click", () => {
   doneButton.addEventListener("click", () => {
     listItem.classList.toggle("done");
   });
-});
+}
 
 function editListItem(e) {
   const listItem = e.target.parentNode.parentNode;
@@ -61,3 +84,5 @@ function editListItem(e) {
   itemBeingEdited = listItem;
   button.textContent = "💾";
 }
+
+document.addEventListener("DOMContentLoaded", loadLocalStarage);
