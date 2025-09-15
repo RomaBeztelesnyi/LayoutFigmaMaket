@@ -3,12 +3,9 @@ const list = document.querySelector(".todo_list_item");
 const inputText = document.querySelector(".input-text");
 
 let itemBeingEdited = null;
-let countList = 0 || localStorage.length; // щоб не перезаписувати id задач
+let countList = localStorage.length + 1;
 
 const savedTasks = Object.entries(localStorage);
-console.log(savedTasks);
-
-console.log(localStorage);
 
 function loadLocalStarage() {
   if (savedTasks.length === 0) return;
@@ -21,6 +18,8 @@ function loadLocalStarage() {
 button.addEventListener("click", createElement);
 
 function createElement(id, task) {
+  checkTaskLocalStorage();
+
   if (itemBeingEdited) {
     itemBeingEdited.firstChild.textContent = inputText.value;
     localStorage.setItem(itemBeingEdited.getAttribute("id"), inputText.value);
@@ -67,11 +66,7 @@ function createElement(id, task) {
 
   inputText.value = "";
 
-  removeBtn.addEventListener("click", (e) => {
-    const list = e.target.parentNode.parentNode;
-    list.remove();
-    localStorage.removeItem(list.getAttribute("id"));
-  });
+  removeBtn.addEventListener("click", removeItem);
 
   editButton.addEventListener("click", editListItem);
 
@@ -80,11 +75,32 @@ function createElement(id, task) {
   });
 }
 
-function editListItem(e) {
-  const listItem = e.target.parentNode.parentNode;
-  inputText.value = listItem.firstChild.textContent;
-  itemBeingEdited = listItem;
+const removeItem = (e) => {
+  const list = e.target.parentNode.parentNode;
+  list.remove();
+  localStorage.removeItem(list.getAttribute("id"));
+};
+
+const editListItem = (e) => {
+  const list = e.target.parentNode.parentNode;
+  inputText.value = list.firstChild.textContent;
+  itemBeingEdited = list;
+  localStorage.removeItem(list.getAttribute("id"));
   button.textContent = "💾";
-}
+};
+
+const checkTaskLocalStorage = () => {
+  const savedTasks = Object.values(localStorage);
+  if (savedTasks.length === 0) {
+    return;
+  }
+  savedTasks.forEach((task) => {
+    if (task === inputText.value) {
+      alert("This task is already in your to-do list");
+      inputText.value = "";
+      return;
+    }
+  });
+};
 
 document.addEventListener("DOMContentLoaded", loadLocalStarage);
