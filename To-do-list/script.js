@@ -4,12 +4,17 @@ import { editListItem } from "./LogicComponents/editListItem.js";
 import { checkTaskLocalStorage } from "./LogicComponents/checkTask.js";
 import { loadLocalStarage } from "./LogicComponents/loadLocalStorage.js";
 
-const button = document.querySelector(".btn");
+export const button = document.querySelector(".btn");
 const list = document.querySelector(".todo_list_item");
 
 export const inputText = document.querySelector(".input-text");
 
 let itemBeingEdited = null;
+
+export const setItemBeingEdited = (value) => {
+  itemBeingEdited = value;
+};
+
 let countList = storage.getTasks().length + 1;
 
 button.addEventListener("click", createElement);
