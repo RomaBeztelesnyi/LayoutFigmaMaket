@@ -1,28 +1,24 @@
+import { storage } from "./LogicComponents/storageHelper.js";
+import { removeItem } from "./LogicComponents/removeItem.js";
+import { editListItem } from "./LogicComponents/editListItem.js";
+import { checkTaskLocalStorage } from "./LogicComponents/checkTask.js";
+import { loadLocalStarage } from "./LogicComponents/loadLocalStorage.js";
+
 const button = document.querySelector(".btn");
 const list = document.querySelector(".todo_list_item");
-const inputText = document.querySelector(".input-text");
+
+export const inputText = document.querySelector(".input-text");
 
 let itemBeingEdited = null;
-let countList = localStorage.length + 1;
-
-const savedTasks = Object.entries(localStorage);
-
-function loadLocalStarage() {
-  if (savedTasks.length === 0) return;
-  for (let i = 0; i < savedTasks.length; i++) {
-    const [id, task] = savedTasks[i];
-    createElement(id, task);
-  }
-}
+let countList = storage.getTasks().length + 1;
 
 button.addEventListener("click", createElement);
 
-function createElement(id, task) {
+export function createElement(id, task) {
   checkTaskLocalStorage();
-
   if (itemBeingEdited) {
     itemBeingEdited.firstChild.textContent = inputText.value;
-    localStorage.setItem(itemBeingEdited.getAttribute("id"), inputText.value);
+    storage.updateTask(itemBeingEdited.getAttribute("id"), inputText.value);
     itemBeingEdited = null;
     button.textContent = "Add Task";
     inputText.value = "";
@@ -45,9 +41,12 @@ function createElement(id, task) {
     }
     listItem.setAttribute("id", `task-${countList++}`);
     listItem.innerText = inputText.value;
-    localStorage.setItem(listItem.getAttribute("id"), inputText.value);
+    const newTask = {
+      id: listItem.getAttribute("id"),
+      text: inputText.value,
+    };
+    storage.addTask(newTask);
   }
-
   // Add classes
   listItem.classList.add("list_item");
 
@@ -74,33 +73,5 @@ function createElement(id, task) {
     listItem.classList.toggle("done");
   });
 }
-
-const removeItem = (e) => {
-  const list = e.target.parentNode.parentNode;
-  list.remove();
-  localStorage.removeItem(list.getAttribute("id"));
-};
-
-const editListItem = (e) => {
-  const list = e.target.parentNode.parentNode;
-  inputText.value = list.firstChild.textContent;
-  itemBeingEdited = list;
-  localStorage.removeItem(list.getAttribute("id"));
-  button.textContent = "💾";
-};
-
-const checkTaskLocalStorage = () => {
-  const savedTasks = Object.values(localStorage);
-  if (savedTasks.length === 0) {
-    return;
-  }
-  savedTasks.forEach((task) => {
-    if (task === inputText.value) {
-      alert("This task is already in your to-do list");
-      inputText.value = "";
-      return;
-    }
-  });
-};
 
 document.addEventListener("DOMContentLoaded", loadLocalStarage);
