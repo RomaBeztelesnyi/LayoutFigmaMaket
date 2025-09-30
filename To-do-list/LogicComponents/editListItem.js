@@ -4,5 +4,6 @@ export const editListItem = (e) => {
   const list = e.target.parentNode.parentNode;
   inputText.value = list.firstChild.textContent;
   setItemBeingEdited(list);
+  list.remove();
   button.textContent = "💾";
 };

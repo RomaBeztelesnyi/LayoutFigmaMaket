@@ -1,4 +1,5 @@
 import { storage } from "./LogicComponents/storageHelper.js";
+import { doneItem } from "./LogicComponents/doneTask.js";
 import { removeItem } from "./LogicComponents/removeItem.js";
 import { editListItem } from "./LogicComponents/editListItem.js";
 import { checkTaskLocalStorage } from "./LogicComponents/checkTask.js";
@@ -17,19 +18,30 @@ export const setItemBeingEdited = (value) => {
 
 let countList = storage.getTasks().length + 1;
 
-button.addEventListener("click", createElement);
+const resetInput = () => {
+  itemBeingEdited = null;
+  button.textContent = "Add Task";
+  inputText.value = "";
+};
+
+button.addEventListener("click", () => {
+  if (itemBeingEdited) {
+    storage.updateTask(itemBeingEdited.getAttribute("id"), inputText.value);
+    itemBeingEdited.firstChild.textContent = inputText.value;
+    if (!inputText.value) {
+      storage.removeTask(itemBeingEdited.getAttribute("id"));
+      resetInput();
+      return;
+    }
+    createElement(itemBeingEdited.getAttribute("id"), inputText.value);
+    resetInput();
+  } else {
+    createElement();
+  }
+});
 
 export function createElement(id, task) {
   checkTaskLocalStorage();
-  if (itemBeingEdited) {
-    itemBeingEdited.firstChild.textContent = inputText.value;
-    storage.updateTask(itemBeingEdited.getAttribute("id"), inputText.value);
-    itemBeingEdited = null;
-    button.textContent = "Add Task";
-    inputText.value = "";
-    return;
-  }
-
   const listItem = document.createElement("li");
   const groupBtn = document.createElement("div");
   const doneButton = document.createElement("button");
@@ -53,6 +65,7 @@ export function createElement(id, task) {
     storage.addTask(newTask);
   }
   // Add classes
+
   listItem.classList.add("list_item");
 
   removeBtn.classList.add("btn_remove");
@@ -74,9 +87,7 @@ export function createElement(id, task) {
 
   editButton.addEventListener("click", editListItem);
 
-  doneButton.addEventListener("click", () => {
-    listItem.classList.toggle("done");
-  });
+  doneButton.addEventListener("click", doneItem);
 }
 
 document.addEventListener("DOMContentLoaded", loadLocalStarage);
