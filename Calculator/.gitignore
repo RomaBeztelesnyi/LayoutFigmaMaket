@@ -5,15 +5,11 @@ yarn-debug.log*
 pnpm-debug.log*
 
 # Build / output
-dist/            # видали цей рядок якщо хочеш зберігати dist у репозиторії
-build/
+
 out/
 coverage/
 *.tsbuildinfo
 
-# Transpiled files / maps
-*.js
-*.js.map
 
 # Env
 .env
@@ -26,3 +22,9 @@ coverage/
 # OS
 .DS_Store
 Thumbs.db
+
+# Logs & caches
+*.log
+.cache/
+.parcel-cache/
+.eslintcache
