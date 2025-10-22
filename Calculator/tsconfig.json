@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "es2024", // Встановити версію JavaScript, у яку буде транспільовано код, і підключити відповідні бібліотеки.
+
+    "module": "es2022", // Визначити формат модульного коду.
+    "rootDir": "./src", // Вказати кореневу папку для вихідних файлів.
+
+    "allowImportingTsExtensions":null,
+    "noEmit":true,
+    "sourceMap": true, // Створювати sourcemap-файли для згенерованого JavaScript.
+
+    "outDir": "./dist", // Вказати папку, у яку будуть збережені всі згенеровані файли.
+    "removeComments": false, // Видалити всі коментарі з вихідного коду.
+
+    "esModuleInterop": true, // Додати підтримку імпорту CommonJS-модулів у стилі ES6.
+
+    "forceConsistentCasingInFileNames": true, // Вимагати однакового регістру у назвах файлів при імпорті.
+
+    "strict": true, // Увімкнути всі суворі перевірки типів.
+
+    "strictNullChecks": true, // Враховувати null та undefined під час перевірки типів.
+
+    "skipLibCheck": true // Пропустити перевірку типів усіх .d.ts файлів.                               /* Skip type checking all .d.ts files. */
+  }
+}
